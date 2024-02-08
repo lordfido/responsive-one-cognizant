@@ -1,0 +1,44 @@
+{
+  "name": "Responsive OneCognizant",
+  "version": "1.0.0",
+  "description": "Makes OneCognizant responsiveActualiza la apariencia de la web de mercadona",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://onecognizant.cognizant.com/*"
+      ],
+      "js": [
+        "/js/utils/index.js",
+        "/js/index.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://onecognizantbcazrapps.cognizant.com/2394/*"
+      ],
+      "js": [
+        "/js/utils/index.js",
+        "/js/goPerform.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "https://onecognizant.cognizant.com/*"
+      ],
+      "resources": [
+        "/css/index.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://onecognizantbcazrapps.cognizant.com/*"
+      ],
+      "resources": [
+        "/css/goPerform.css"
+      ]
+    }
+  ],
+  "manifest_version": 3
+}
