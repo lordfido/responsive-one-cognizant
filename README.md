@@ -18,6 +18,6 @@ _Cannot see the video? [Click here](./docs/videos/demo-001.mp4)_
 2. Open chrome and visit [chrome://extensions](chrome://extensions)
 3. Enable the toggle for `Developer Mode`
 4. Click on `Upload unpacked extension`
-5. Select the folder where you cloned the reopsitory
+5. Select the `build` folder within the cloned the reopsitory
 
 ![How to install from your computer](./docs/img/how-to-load-an-extension.png?raw=true)
