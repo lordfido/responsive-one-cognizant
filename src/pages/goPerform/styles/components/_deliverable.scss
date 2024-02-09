@@ -1,0 +1,19 @@
+@mixin deliverable {
+  .section_content-component {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 100%;
+  
+    & > .deliverable_highlight {
+      position: relative;
+      left: 0 !important;
+      top: 0;
+    }
+  
+    & > .row {
+      flex: 1;
+    }
+  }
+}
