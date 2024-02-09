@@ -1,0 +1,32 @@
+{
+  "name": "responsive-one-cognizant",
+  "version": "1.0.0",
+  "repository": "git@github.com:lordfido/responsive-one-cognizant.git",
+  "author": "Rafael Pérez García <real.lord.fido@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clear:build": "rimraf ./build",
+    "clear:dist": "rimraf ./dist",
+    "clear": "yarn run clear:build && yarn run clear:dist",
+    "copy-manifest:build": "cpy --flat ./src/manifest.json ./build",
+    "copy-manifest:dist": "cpy --flat ./src/manifest.json ./dist",
+    "prebuild": "yarn run clear:build && yarn run copy-manifest:build",
+    "build": "webpack --config ./webpack.config.prod.js",
+    "predev": "yarn run clear:dist && yarn run copy-manifest:dist",
+    "dev": "webpack --config ./webpack.config.dev.js --watch"
+  },
+  "devDependencies": {
+    "cpy-cli": "^5.0.0",
+    "css-loader": "^6.10.0",
+    "file-loader": "^6.2.0",
+    "rimraf": "^5.0.5",
+    "sass": "^1.70.0",
+    "sass-loader": "^14.1.0",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
