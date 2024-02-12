@@ -1,18 +1,17 @@
-import { loadFile } from '../../utils';
-import { removeHardcodedSizes } from './common';
+import { loadGoPerformCss, removeHardcodedSizes } from './common';
 import './goPerform';
 
 const init = () => {
-  const loadGoPerformCss = () => {
-    loadFile({ cssFileName: 'goPerform.css' });
+  const handleOnLoad = () => {
+    loadGoPerformCss();
     removeHardcodedSizes(document);
   }
 
   document.onload = () => {
-    loadGoPerformCss();
+    handleOnLoad();
   }
 
-  loadGoPerformCss();
+  handleOnLoad();
 };
 
 init();

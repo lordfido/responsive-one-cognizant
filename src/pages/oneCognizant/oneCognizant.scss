@@ -4,13 +4,35 @@
   display: none !important;
 }
 
-html > body > div#DesktopPlatformBar > div.containerHolder > div.homePageDivHolder {
-  max-height: none;
-  max-width: 100% !important;
+html,
+body {
+  height: auto;
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-y: auto !important;
+  width: 100%;
+}
 
-  & > #appFrame {
-    height: calc(100vh - 47px) !important;
+html > body > div#DesktopPlatformBar {
+
+  // Content
+  & > div.containerHolder > div.homePageDivHolder {
+    max-height: none;
     max-width: 100% !important;
-    width: 100% !important;
+
+    & > #appFrame {
+      height: calc(100vh - 47px) !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+  }
+
+  // Promotions
+  .beCognizantLink,
+  .promoNavbarIcon,
+  // Floating widgets
+  & > nav#sideNavComplMenu,
+  & > div#livechatOneC2 {
+    display: none !important;
   }
 }

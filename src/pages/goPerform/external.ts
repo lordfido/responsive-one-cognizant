@@ -1,19 +1,14 @@
 import {
   getFrameElement,
   getFrameInnerDocument,
-  loadFile,
   log
 } from '../../utils';
-import { removeHardcodedSizes } from './common';
+import { loadGoPerformCss, removeHardcodedSizes } from './common';
 
 const useIframeJS = (doc: Document) => {
   log('Using iframe', doc);
 
-  loadFile({
-    doc,
-    cssFileName: 'goPerform.css'
-  });
-
+  loadGoPerformCss(doc);
   removeHardcodedSizes(doc);
 };
 

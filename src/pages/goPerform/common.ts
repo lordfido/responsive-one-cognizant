@@ -1,4 +1,4 @@
-import { log } from '../../utils';
+import { loadFile } from '../../utils';
 
 const removeHardcodedHeights = (doc: Document) => {
   const myTeamsTable = doc.querySelector('#goals-supervisor > .second-table-container') as HTMLElement;
@@ -9,6 +9,11 @@ const removeHardcodedHeights = (doc: Document) => {
   const myTeamsTableHeading = doc.querySelector('#div_headerRow') as HTMLElement;
   if (myTeamsTableHeading) {
     myTeamsTableHeading.style.width = 'auto';
+  }
+
+  const homeManagersCommentsHeading = doc.querySelector('div#body > section > div[role=main] > .main #yea .contentYeaBefore > .supervisorCmtsAssociate > .supervisorCmtsAssHead > font') as HTMLElement;
+  if (homeManagersCommentsHeading) {
+    homeManagersCommentsHeading.style.paddingLeft = '0';
   }
 };
 
@@ -28,3 +33,10 @@ export const removeHardcodedSizes = (doc: Document) => {
     removeHardcodedWidths(doc);
   }, 500);
 };
+
+export const loadGoPerformCss = (doc: Document = document) => {
+  loadFile({
+    doc,
+    cssFileName: 'goPerform.css',
+  })
+}

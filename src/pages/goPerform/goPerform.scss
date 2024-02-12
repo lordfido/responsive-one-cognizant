@@ -13,12 +13,22 @@ div#body > section,
 div#body > section > #ecmoverlay,
 div#body > section > #loading,
 div#body > section > div[role="main"],
-div#body > section > div[role="main"] > .main {
+div#body > section > .main {
   height: auto;
   min-height: 100vh;
   overflow: hidden;
   overflow-y: auto;
   width: 100%;
+}
+
+html > body > div#body {
+  textarea {
+    box-sizing: border-box;
+    min-height: 5rem;
+    padding: 6px 12px;
+    resize: vertical;
+    width: 100% !important;
+  }
 }
 
 div#body > section > div[role="main"] {
@@ -27,17 +37,25 @@ div#body > section > div[role="main"] {
     box-sizing: border-box;
     max-width: $pageMaxWidth;
     margin: 0 auto;
-    padding-bottom: 12px;
+    min-height: 100vh;
+    padding: 12px 0;
     
     /* My Team's promotions */
+    &,
     & > .main {
       height: auto !important;
       width: 100% !important;
     }
 
     /* Main header (with Main tabs an user info */
-    #header > div.pull-right {
-      margin-right: var(--page-margin) !important;
+    #header {
+      &.nav_cpm {
+        border-top: none;
+      }
+      
+      & > div.pull-right {
+        margin-right: var(--page-margin) !important;
+      }
     }
 
     /* Blue header below main tabs, heading the main content */
@@ -78,6 +96,15 @@ div#body > section > div[role="main"] {
       }
     }
 
+    .section_content {
+      box-sizing: border-box;
+      padding: 12px;
+
+      .section_content_view {
+        width: 100%;
+      }
+    }
+
     /* Navigation Tabs */
     .nav {
       float: left;
@@ -105,16 +132,65 @@ div#body > section > div[role="main"] {
     .tab-content {
       height: auto !important;
 
+      .summary_yea_sup {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        height: 64px;
+
+        & > .section_header--caption,
+        & > .section_header--weightage {
+          width: auto !important;
+        }
+
+
+        & > .section_darkheader--img,
+        & > .section_header--caption > .row > .section_null,
+        & > .section_header--weightage > .collapse-icon,
+        & > .section_header--weightage > .expand-icon {
+          height: 100%;
+          margin-top: 0 !important;
+        }
+
+        & > .section_header--caption {
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+
+          & > .row {
+            &,
+            & > .section_null {
+              align-items: center;
+              display: flex;
+              justify-content: flex-start;
+            }
+
+            &:has( .section_null) {
+              flex: 1;
+            }
+          }
+        }
+
+        & > .section_header--weightage > .collapse-icon,
+        & > .section_header--weightage > .expand-icon {
+          background-position: center;
+          width: 64px;
+        }
+      }
+
       & > .tab-pane .section_content,
       & > #interim_check_in.tab-pane .section_content.afterPerformanceClick {
         height: auto !important;
       }
 
       & > .tab-pane .section_content {
-        padding: 0;
+        padding: 16px !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
 
         & > * {
           margin: 0 !important;
+          margin-bottom: 16px !important;
         }
         
         & .notes-p {
@@ -166,17 +242,14 @@ div#body > section > div[role="main"] {
               float: none;
               padding: 6px;
               width: 25%;
-
-              & > .section_content-component {
-                display: inline-block;
-                float: none;
-                margin: 0;
-                width: 100%;
-              }
             }
           }
         }
       }
+    }
+
+    ul > li:not(.viewKeyRoleNote) > {
+      @include deliverable;
     }
     
     /* My Team's table */
@@ -188,9 +261,125 @@ div#body > section > div[role="main"] {
       width: calc(100% - var(--page-margin) - var(--page-margin) - 30px - 10px) !important;
     }
     
-    .myTeamYeaSection .compareReportees,
+    .superCmtContent,
+    .myTeamYeaSection .reportees > .compareReportees,
     .supervisor-content > .tab-content > #goals-supervisor > .second-table-container {
       height: auto !important;
+    }
+
+    .row.section_metrics > .section_content {
+      height: auto !important;
+      margin-bottom: 36px;
+      padding: 6px;
+
+      .score-tile {
+        margin: 6px;
+      }
+
+      .slider {
+        float: left;
+        margin: 0 auto!important;
+        width: 100%;
+
+        & > .slider-list {
+          width: 100%;
+
+          & > li {
+            margin: 6px;
+            width: auto;
+
+            .section_content-component {
+              margin: 0;
+              width: 100%;
+
+              .circle {
+                margin: 24px;
+                width: auto;
+              }
+            }
+          }
+
+        }
+      }
+    }
+
+    .row.section_deliverables > .section_content {
+      & > ul {
+        margin: 0;
+        width: 100%;
+
+        & > li {
+          @include deliverable;
+        }
+      }
+    }
+
+    #goals-supervisorkro {
+      margin: 0;
+      width: 100%;
+    }
+
+    .myTeamYeaSection > .reportees > .compareReportees .eachReportee > .assocYeaScore > .yeaCommonGrp > .commonYeaGrp {
+      border: none;
+      border-right: 1px solid var(--grey-medium);
+      box-sizing: border-box;
+      width: 33.33%;
+    }
+    
+    #yea {
+      margin: 12px 6px;
+      margin-top: 0;
+
+      .quarter_tab_deliverable {
+        box-sizing: border-box;
+        margin: 0;
+        width: 100%;
+      }
+
+      .assocYeaScore > .yeaCommonGrp {
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 12px 19px;
+        padding-bottom: 0;
+        width: 100%;
+
+        & > .commonYeaGrp {
+          box-sizing: border-box;
+          height: auto;
+          padding: 12px 8px;
+          overflow: hidden;
+          width: 33.33%;
+        }
+      }
+
+      .tabContentView_deliverable {
+        height: auto !important;
+        overflow-y: auto !important;
+      }
+
+      .contentYeaBefore > .supervisorCmtsAssociate > .supervisorCmtsAssHead {
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+      }
+
+      .superComments {
+        width: 100%;
+
+        .tabContentView .tabSecOne_deliverable {
+          box-sizing: border-box;
+          margin: 0 !important;
+          padding: 12px ;
+        }
+
+        .supervisorquestionsAnswer > textarea {
+          margin-left: 0 !important;
+        }
+      }
     }
 
     #interim_check_in,
@@ -342,8 +531,6 @@ div#body > section > div[role="main"] {
               padding: 6px;
             }
 
-            @include deliverable;
-
             $feedbackOffset: 100px;
 
             .notes {
@@ -403,6 +590,12 @@ div#body > section > div[role="main"] {
       }
     }
 
+    #requests_recieved {
+      .section_content-component {
+        flex-direction: column;
+      }
+    }
+
     // @include deliverable;
   }
 
@@ -459,10 +652,17 @@ div#body > section > div[role="main"] {
 
       .notes {
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+
+        &.media {
+          flex-direction: row;
+        }
 
         & > .media-body {
           &,
           & > .mediaHolder {
+            flex: 1;
             width: 100%;
           }
 
@@ -610,12 +810,14 @@ div#body > section > div[role="main"] {
     width: 100%;
 
     & > .mCustomScrollBox {
-      overflow: auto !important;
+      overflow: hidden !important;
+      overflow-y: auto !important;
       width: 100%;
 
       & > .mCSB_container {
-        overflow: auto !important;
         margin-right: 0 !important;
+        overflow: hidden !important;
+        overflow-y: auto !important;
         position: relative !important;
         width: 100%;
       }
@@ -636,7 +838,7 @@ div#body > section > div[role="main"] {
 div#body > section > #loading,
 div#body > section > #loading > #processMessage,
 /* Expired session modal */
-div[role="main"] > .notenabled {
+div.notenabled {
   margin-left: 0 !important;
   margin-top: 0 !important;
   left: 50% !important;

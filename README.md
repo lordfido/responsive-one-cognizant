@@ -21,3 +21,9 @@ _Cannot see the video? [Click here](./docs/videos/demo-001.mp4)_
 5. Select the `build` folder within the cloned the reopsitory
 
 ![How to install from your computer](./docs/img/how-to-load-an-extension.png?raw=true)
+
+
+### TODOS
+* My Yea -> Associate comments
+* Notes -> Interim Check-in -> Request interim check-in modal
+* Notes -> Requests received

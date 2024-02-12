@@ -1,14 +1,14 @@
 @mixin deliverable {
-  .section_content-component {
+  .section_content-component:not(.rolegoalsection) {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    margin: 0;
+    margin: 0 !important;
     width: 100%;
   
     & > .deliverable_highlight {
-      position: relative;
       left: 0 !important;
+      position: relative;
       top: 0;
     }
   
