@@ -6,17 +6,18 @@ module.exports = {
   entry: {
     oneCognizant: './src/pages/oneCognizant/index.ts',
     goPerform: './src/pages/goPerform/index.ts',
+    myLearningStudio: './src/pages/myLearningStudio/index.ts'
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist/js/'),
+    path: path.resolve(__dirname, 'dist/js/')
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.scss$/i,
@@ -26,11 +27,11 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].css',
-              outputPath: '../css/',
+              outputPath: '../css/'
             }
           },
           // Compiles Sass to CSS
-          'sass-loader',
+          'sass-loader'
         ]
       }
     ]
@@ -38,4 +39,4 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.scss']
   }
-}
+};

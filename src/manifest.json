@@ -4,22 +4,54 @@
   "description": "Makes OneCognizant responsiveActualiza la apariencia de la web de mercadona",
   "content_scripts": [
     {
-      "matches": ["https://onecognizant.cognizant.com/*"],
-      "js": ["/js/oneCognizant.js"]
+      "matches": [
+        "https://onecognizant.cognizant.com/*"
+      ],
+      "js": [
+        "/js/oneCognizant.js"
+      ]
     },
     {
-      "matches": ["https://onecognizantbcazrapps.cognizant.com/2394/*"],
-      "js": ["/js/goPerform.js"]
+      "matches": [
+        "https://onecognizantbcazrapps.cognizant.com/2394/*"
+      ],
+      "js": [
+        "/js/goPerform.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://onecognizantazrapps.cognizant.com/1738/*"
+      ],
+      "js": [
+        "/js/myLearningStudio.js"
+      ]
     }
   ],
   "web_accessible_resources": [
     {
-      "matches": ["https://onecognizant.cognizant.com/*"],
-      "resources": ["/css/oneCognizant.css"]
+      "matches": [
+        "https://onecognizant.cognizant.com/*"
+      ],
+      "resources": [
+        "/css/oneCognizant.css"
+      ]
     },
     {
-      "matches": ["https://onecognizantbcazrapps.cognizant.com/*"],
-      "resources": ["/css/goPerform.css"]
+      "matches": [
+        "https://onecognizantbcazrapps.cognizant.com/*"
+      ],
+      "resources": [
+        "/css/goPerform.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://onecognizantazrapps.cognizant.com/*"
+      ],
+      "resources": [
+        "/css/myLearningStudio.css"
+      ]
     }
   ],
   "manifest_version": 3

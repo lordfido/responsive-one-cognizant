@@ -252,13 +252,15 @@ div#body > section > div[role="main"] {
       @include deliverable;
     }
     
-    /* My Team's table */
-    .supervisor-content,
-    /* Notes' table */
-    .notes-categories {
-      height: auto !important;
-      margin: 0 var(--page-margin) !important;
-      width: calc(100% - var(--page-margin) - var(--page-margin) - 30px - 10px) !important;
+    .supervisor-content {
+      &,
+      & > .tab-content {
+        &,
+        & > .tab-manager#yea {
+          margin: 0 !important;
+          width: 100% !important;
+        }
+      }
     }
     
     .superCmtContent,
@@ -297,7 +299,8 @@ div#body > section > div[role="main"] {
               .section_content-component:has(.circle) {
                 flex-direction: column;
                 margin: 0;
-                padding: 0 12px;
+                padding: 12px;
+                padding-bottom: 0;
                 width: 100%;
   
                 & > h3 {
@@ -313,7 +316,49 @@ div#body > section > div[role="main"] {
           }
   
           .noorg {
-            padding: 12px;
+            padding: 6px;
+          }
+        }
+      }
+
+      &.section_keyrole > .section_content {
+        padding: 6px;
+        padding-top: 12px;
+
+        & > .row:first-of-type {
+          align-items: center;
+          display: flex;
+          margin-bottom: 0 !important;
+          padding: 6px;
+          padding-bottom: 12px;
+
+          & > p.edit_role-p,
+          & > .edit_role-metrics {
+            margin: 0 !important;
+            margin-right: 12px !important;
+          }
+        }
+
+        & > .slider-keyrole {
+          float: left;
+          margin: 0;
+          overflow: auto;
+          width: 100%;
+
+          & > ul.slider-list-keyrole {
+            display: flex;
+            float: left;
+            width: auto;
+
+            & > li {
+              margin: 6px;
+              width: auto;
+
+              & > div {
+                margin: 0;
+                width: 100%;
+              }
+            }
           }
         }
       }
@@ -345,6 +390,11 @@ div#body > section > div[role="main"] {
     #yea {
       margin: 12px 6px;
       margin-top: 0;
+
+      .toggle_yeaComments > .section_keyrole > .tabSecOne.active > slider > slider-list {
+        float: left;
+        width: auto;
+      }
 
       .quarter_tab_deliverable {
         box-sizing: border-box;
@@ -630,7 +680,7 @@ div#body > section > div[role="main"] {
         overflow-y: auto;
         top: 50% !important;
         transform: translate(-50%, -50%);
-        width: 100% !important;
+        width: 90vw !important;
 
         .nonote {
           margin: var(--page-margin) auto;

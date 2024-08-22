@@ -1,3 +1,1 @@
-export type FrameName =
-  | 'rootLink'
-  | 'goPerform';
+export type FrameName = 'rootLink' | 'goPerform' | 'myLearningStudio';

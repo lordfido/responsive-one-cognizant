@@ -1,0 +1,93 @@
+@import '../../constants/constants';
+@import '../../utils/zIndex';
+
+html,
+body,
+div#body,
+div#body > section,
+div#body > section > #ecmoverlay,
+div#body > section > #loading,
+div#body > section > div[role='main'],
+div#body > section > .main {
+  height: auto;
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+
+// Spam navigation icons
+.header > .icons {
+  & > .recommandation,
+  & > .tour,
+  & > .social {
+    display: none !important;
+  }
+
+  & > .preferences.PreferenceBlinkAccess {
+    animation: none;
+  }
+}
+
+.header-wrapper {
+  & > header > div > .row > .common-menu-container {
+    margin-bottom: 0;
+  }
+}
+
+.header-wrapper + .container-width {
+  margin: 0 auto;
+  max-width: $pageMaxWidth;
+  padding: 12px 24px;
+  width: 100%;
+
+  @media (min-width: 1200px) {
+    width: 100%;
+  }
+}
+
+.routerContainer {
+  &,
+  & > #routerWrapper {
+    max-width: none !important;
+  }
+
+  & > #routerWrapper {
+    overflow: auto !important;
+
+    & > .mCustomScrollBox,
+    & > preferences-view > .preferences-container {
+      max-width: $pageMaxWidth;
+      margin: 0 auto;
+    }
+
+    & > .mCustomScrollBox {
+      max-height: none !important;
+    }
+
+    .dashboard-container {
+      @media only screen and (max-width: 1328px) {
+        padding: 0 24px;
+      }
+
+      learningdashboard > div {
+        margin-top: 24px;
+        margin-bottom: 0;
+      }
+
+      // Spam modules
+      .career_wrap,
+      .activity_wrap {
+        display: none !important;
+      }
+    }
+
+    // Spam popups
+    #feedbackPopupClose,
+    #feedback2,
+    #sliderPopupClose,
+    #livePopup {
+      display: none !important;
+    }
+  }
+}
