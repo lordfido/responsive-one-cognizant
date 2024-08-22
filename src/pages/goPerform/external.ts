@@ -1,8 +1,4 @@
-import {
-  getFrameElement,
-  getFrameInnerDocument,
-  log
-} from '../../utils';
+import { getFrameElement, getFrameInnerDocument, log } from '../../utils';
 import { loadGoPerformCss, removeHardcodedSizes } from './common';
 
 const useIframeJS = (doc: Document) => {
@@ -21,13 +17,13 @@ const useDocumentJS = () => {
     window.open((goPerformIFrame as HTMLIFrameElement).src);
     getFrameElement('rootLink')?.click();
   }
-}
+};
 
 const useGoPerformCode = () => {
   // If iframe's inner document is accessible
   const goPerformIframeDoc = getFrameInnerDocument('goPerform');
-  log('goPerformIframeDoc', goPerformIframeDoc)
-  
+  log('goPerformIframeDoc', goPerformIframeDoc);
+
   if (goPerformIframeDoc) {
     useIframeJS(goPerformIframeDoc);
     return;
@@ -43,6 +39,6 @@ const useGoPerformCode = () => {
 
   // Keep looking for goPerform app
   setTimeout(useGoPerformCode, 500);
-}
+};
 
 export default useGoPerformCode;
