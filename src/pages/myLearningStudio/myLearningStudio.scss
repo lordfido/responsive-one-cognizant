@@ -53,7 +53,8 @@ div#body > section > .main {
   }
 
   & > #routerWrapper {
-    overflow: auto !important;
+    overflow: hidden !important;
+    overflow-y: auto !important;
 
     & > .mCustomScrollBox,
     & > preferences-view > .preferences-container {
@@ -63,6 +64,10 @@ div#body > section > .main {
 
     & > .mCustomScrollBox {
       max-height: none !important;
+
+      & + .mCSB_1_scrollbar {
+        display: none !important;
+      }
     }
 
     .dashboard-container {
