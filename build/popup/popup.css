@@ -1,0 +1,73 @@
+:root {
+  --cog-blue: #2e308e;
+  --cog-blue-dark: #000048;
+  --white: #fff;
+  --false-white: #f3f3f3;
+}
+
+html, body {
+  display: flex;
+  height: 160px;
+  justify-content: center;
+  width: 240px;
+}
+
+body {
+  background: var(--cog-blue);
+  font-family:
+    'Lucida Sans',
+    'Lucida Sans Regular',
+    'Lucida Grande',
+    'Lucida Sans Unicode',
+    Geneva,
+    Verdana,
+    sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+}
+
+.List {
+  color: var(--cog-blue-dark);
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 4px 8px;
+}
+
+.List__Item {
+  background: var(--false-white);
+  border-radius: 8px;
+  margin: 4px 0;
+  transition: all 0.2s;
+}
+
+.List__Item:hover {
+  background: var(--white);
+}
+
+.Item {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 8px;
+}
+
+.Item__Icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.Item__Description {
+  flex: 1;
+}

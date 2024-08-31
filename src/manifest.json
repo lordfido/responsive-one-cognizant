@@ -54,5 +54,11 @@
       ]
     }
   ],
+  "permissions": ["tabs"],
+  "action": {
+    "default_icon": {},
+    "default_title": "Responsive OneCognizant",
+    "default_popup": "./popup/index.html"
+  },
   "manifest_version": 3
 }
