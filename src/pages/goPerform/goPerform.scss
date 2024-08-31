@@ -12,7 +12,7 @@ div#body,
 div#body > section,
 div#body > section > #ecmoverlay,
 div#body > section > #loading,
-div#body > section > div[role="main"],
+div#body > section > div[role='main'],
 div#body > section > .main {
   height: auto;
   min-height: 100vh;
@@ -31,7 +31,7 @@ html > body > div#body {
   }
 }
 
-div#body > section > div[role="main"] {
+div#body > section > div[role='main'] {
   // Regular content
   & > .main {
     box-sizing: border-box;
@@ -39,7 +39,7 @@ div#body > section > div[role="main"] {
     margin: 0 auto;
     min-height: 100vh;
     padding: 12px 0;
-    
+
     /* My Team's promotions */
     &,
     & > .main {
@@ -52,7 +52,7 @@ div#body > section > div[role="main"] {
       &.nav_cpm {
         border-top: none;
       }
-      
+
       & > div.pull-right {
         margin-right: var(--page-margin) !important;
       }
@@ -66,16 +66,34 @@ div#body > section > div[role="main"] {
     }
 
     /* Main content */
-    .section-body {
+    .section-body,
+    .supervisor-content {
       margin: 0 var(--page-margin) !important;
-      width: calc(100% - var(--page-margin) - var(--page-margin) - 30px - 10px) !important;
+      width: calc(
+        100% - var(--page-margin) - var(--page-margin) - 30px - 10px
+      ) !important;
+    }
 
+    .section-body {
       &.myTeamYeaSection,
       &.myTeamYeaSectionBefore,
       &.myTeamPromo {
-        width: calc(100% - var(--page-margin) - var(--page-margin) - 10px) !important;
+        width: calc(
+          100% - var(--page-margin) - var(--page-margin) - 10px
+        ) !important;
       }
-    
+
+      .supervisor-content {
+        &,
+        & > .tab-content {
+          &,
+          & > .tab-manager#yea {
+            margin: 0 !important;
+            width: 100% !important;
+          }
+        }
+      }
+
       /* Notification's table */
       .notification_header,
       .notification_thirty {
@@ -83,15 +101,19 @@ div#body > section > div[role="main"] {
         display: inline-block;
         float: none;
       }
-      
+
       .notification_thirty {
         margin-left: 8px;
         margin-right: 0 !important;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
       }
-      
-      & > #div_notificationList > .tab-content > .tab-pane.active > #div_notificationContainer {
+
+      &
+        > #div_notificationList
+        > .tab-content
+        > .tab-pane.active
+        > #div_notificationContainer {
         max-height: none !important;
       }
     }
@@ -112,11 +134,11 @@ div#body > section > div[role="main"] {
       margin-top: 12px;
       margin-bottom: 0 !important;
       padding: 0 !important;
-    
+
       & + .row.nav-container {
         clear: both;
       }
-      
+
       &.nav-pills > li {
         display: inline-block;
         height: auto !important;
@@ -127,7 +149,7 @@ div#body > section > div[role="main"] {
         }
       }
     }
-    
+
     /* Generic tables */
     .tab-content {
       height: auto !important;
@@ -142,7 +164,6 @@ div#body > section > div[role="main"] {
         & > .section_header--weightage {
           width: auto !important;
         }
-
 
         & > .section_darkheader--img,
         & > .section_header--caption > .row > .section_null,
@@ -165,7 +186,7 @@ div#body > section > div[role="main"] {
               justify-content: flex-start;
             }
 
-            &:has( .section_null) {
+            &:has(.section_null) {
               flex: 1;
             }
           }
@@ -192,7 +213,7 @@ div#body > section > div[role="main"] {
           margin: 0 !important;
           margin-bottom: 16px !important;
         }
-        
+
         & .notes-p {
           float: none !important;
           margin: 0 !important;
@@ -224,11 +245,11 @@ div#body > section > div[role="main"] {
               }
             }
           }
-        
+
           & > .mCustomScrollBox > .mCSB_container {
             position: relative !important;
           }
-          
+
           ul.slider-list--general {
             box-sizing: border-box;
             display: flex;
@@ -251,21 +272,13 @@ div#body > section > div[role="main"] {
     ul > li:not(.viewKeyRoleNote) > {
       @include deliverable;
     }
-    
-    .supervisor-content {
-      &,
-      & > .tab-content {
-        &,
-        & > .tab-manager#yea {
-          margin: 0 !important;
-          width: 100% !important;
-        }
-      }
-    }
-    
+
     .superCmtContent,
     .myTeamYeaSection .reportees > .compareReportees,
-    .supervisor-content > .tab-content > #goals-supervisor > .second-table-container {
+    .supervisor-content
+      > .tab-content
+      > #goals-supervisor
+      > .second-table-container {
       height: auto !important;
     }
 
@@ -279,34 +292,34 @@ div#body > section > div[role="main"] {
       &.section_metrics > .section_content {
         height: auto !important;
         padding: 6px;
-  
+
         .score-tile {
           margin: 6px;
         }
-  
+
         .slider {
           float: left;
-          margin: 0 auto!important;
+          margin: 0 auto !important;
           width: 100%;
-  
+
           & > .slider-list {
             width: 100%;
-  
+
             & > li {
               margin: 6px;
               width: auto;
-  
+
               .section_content-component:has(.circle) {
                 flex-direction: column;
                 margin: 0;
                 padding: 12px;
                 padding-bottom: 0;
                 width: 100%;
-  
+
                 & > h3 {
                   margin: 0;
                 }
-  
+
                 .circle {
                   margin: 24px;
                   width: auto;
@@ -314,7 +327,7 @@ div#body > section > div[role="main"] {
               }
             }
           }
-  
+
           .noorg {
             padding: 6px;
           }
@@ -362,12 +375,12 @@ div#body > section > div[role="main"] {
           }
         }
       }
-  
+
       &.section_deliverables > .section_content {
         & > ul {
           margin: 0;
           width: 100%;
-  
+
           & > li {
             @include deliverable;
           }
@@ -380,18 +393,28 @@ div#body > section > div[role="main"] {
       width: 100%;
     }
 
-    .myTeamYeaSection > .reportees > .compareReportees .eachReportee > .assocYeaScore > .yeaCommonGrp > .commonYeaGrp {
+    .myTeamYeaSection
+      > .reportees
+      > .compareReportees
+      .eachReportee
+      > .assocYeaScore
+      > .yeaCommonGrp
+      > .commonYeaGrp {
       border: none;
       border-right: 1px solid var(--grey-medium);
       box-sizing: border-box;
       width: 33.33%;
     }
-    
+
     #yea {
       margin: 12px 6px;
       margin-top: 0;
 
-      .toggle_yeaComments > .section_keyrole > .tabSecOne.active > slider > slider-list {
+      .toggle_yeaComments
+        > .section_keyrole
+        > .tabSecOne.active
+        > slider
+        > slider-list {
         float: left;
         width: auto;
       }
@@ -439,7 +462,7 @@ div#body > section > div[role="main"] {
         .tabContentView .tabSecOne_deliverable {
           box-sizing: border-box;
           margin: 0 !important;
-          padding: 12px ;
+          padding: 12px;
         }
 
         .supervisorquestionsAnswer > textarea {
@@ -457,7 +480,7 @@ div#body > section > div[role="main"] {
       .userdisplay {
         margin: 6px;
       }
-      
+
       .feedback_position {
         box-sizing: border-box;
         display: flex;
@@ -522,7 +545,7 @@ div#body > section > div[role="main"] {
         & > .roleOutcomes > .roleHeader {
           border: 1px solid $tableContentBorderColor !important;
         }
-        
+
         & > .fbPending > .fbHeader {
           height: auto;
         }
@@ -541,7 +564,7 @@ div#body > section > div[role="main"] {
           padding: 6px;
         }
 
-        & > .assocDetails > .assocDetContent { 
+        & > .assocDetails > .assocDetContent {
           flex-wrap: wrap;
 
           & > .assocDetData {
@@ -572,7 +595,7 @@ div#body > section > div[role="main"] {
           margin: 0px;
           padding: 6px;
         }
-      
+
         & > .roleOutcomes > .deliverable_content > .quarter_tab {
           border: none;
           margin: 0px;
@@ -687,11 +710,11 @@ div#body > section > div[role="main"] {
         }
       }
     }
-    
+
     & > .modal-dialog > .modal-content {
       padding: 0;
     }
-    
+
     .modal-content-top,
     &#rolegoal_content .modal-content-top,
     &#addnote-deliverable .modal-content-top {
@@ -776,10 +799,10 @@ div#body > section > div[role="main"] {
 
                 & > .dispAlign,
                 & > .amexcruzBtn {
-                  z-index: map-get($zIndexes, "sidebar");
+                  z-index: map-get($zIndexes, 'sidebar');
                 }
 
-                & > .mediaCont  > #dispName {
+                & > .mediaCont > #dispName {
                   position: relative !important;
                   margin: 0 !important;
                   right: initial !important;
@@ -887,7 +910,7 @@ div#body > section > div[role="main"] {
         position: relative !important;
         width: 100%;
       }
-      
+
       & > .mCSB_scrollTools {
         display: none !important;
       }
