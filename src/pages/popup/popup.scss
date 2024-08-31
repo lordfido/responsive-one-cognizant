@@ -1,0 +1,86 @@
+@import '../../constants/constants';
+
+$windowMargin: 8 * 2;
+$windowTitle: 33;
+$windowContent: 144;
+
+html,
+body {
+  display: flex;
+  height: #{$windowMargin + $windowTitle + $windowContent}px;
+  justify-content: center;
+  width: 240px;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+}
+
+.Window {
+  border: 1px solid $cognizantBlueDark;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  margin: 8px;
+  overflow: hidden;
+  width: 100%;
+
+  &__Title {
+    background-color: $cognizantBlueDark;
+    color: $white;
+    cursor: default;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  &__Content {
+    background-color: $falseWhite;
+    flex: 1;
+  }
+}
+
+.List {
+  color: $cognizantBlueDark;
+  font-weight: bold;
+  margin: 0 auto;
+
+  &__Item {
+    background: transparent;
+    transition: all 0.2s;
+  }
+
+  &__Item:hover {
+    background: $white;
+  }
+}
+
+.Item {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 8px;
+
+  &__Icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &__Description {
+    flex: 1;
+  }
+}

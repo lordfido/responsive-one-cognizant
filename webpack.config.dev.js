@@ -1,19 +1,28 @@
 const path = require('path');
+const { getCopyPlugin, pagesPath } = require('./webpack.utils');
+
+const distPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   entry: {
-    oneCognizant: './src/pages/oneCognizant/index.ts',
-    goPerform: './src/pages/goPerform/index.ts',
-    myLearningStudio: './src/pages/myLearningStudio/index.ts'
+    popup: path.resolve(pagesPath, 'popup/index.ts'),
+    oneCognizant: path.resolve(pagesPath, 'oneCognizant/index.ts'),
+    goPerform: path.resolve(pagesPath, 'goPerform/index.ts'),
+    myLearningStudio: path.resolve(pagesPath, 'myLearningStudio/index.ts')
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist/js/')
+    path: path.resolve(distPath, 'js'),
+    assetModuleFilename: '../images/[name][ext]'
   },
   module: {
     rules: [
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
+      },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -36,6 +45,7 @@ module.exports = {
       }
     ]
   },
+  plugins: [getCopyPlugin(distPath)],
   resolve: {
     extensions: ['.tsx', '.ts', '.scss']
   }

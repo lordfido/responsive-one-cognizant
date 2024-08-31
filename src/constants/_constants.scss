@@ -1,9 +1,15 @@
 $pageMaxWidth: 1280px;
 
+$white: #fff;
+$falseWhite: #f2f2f2;
+
+$cognizantBlue: #2e308e;
+$cognizantBlueDark: #000048;
+
 $tableHeadingBorderColor: var(--accent1-dark);
 $tableHeadingBorderColorWarning: var(--yellow);
 $tableHeadingBorderColorSuccess: var(--green);
 $tableContentBorderColor: #dcdcdc;
 
-$inputBackground: #f2f2f2;
-$inputColor: #000048;
+$inputBackground: $falseWhite;
+$inputColor: $cognizantBlueDark;

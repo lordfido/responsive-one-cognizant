@@ -1,9 +1,19 @@
-import { FrameName } from '../types';
+import { FrameConfig, SupportedApps } from '../types';
 
-interface FrameConfig {
-  name: FrameName;
-  selector: string;
-}
+export const supportedApps: SupportedApps = {
+  'One Cognizant': {
+    icon: require('../assets/icons/cognizant_logo.png'),
+    url: 'https://onecognizant.cognizant.com'
+  },
+  'Go Perform': {
+    icon: require('../assets/icons/goPerform.png'),
+    url: 'https://onecognizantbcazrapps.cognizant.com/2394'
+  },
+  'My Learning Studio': {
+    icon: require('../assets/icons/myLearningStudio.png'),
+    url: 'https://onecognizantazrapps.cognizant.com/1738'
+  }
+};
 
 export const frames: FrameConfig[] = [
   {
@@ -12,10 +22,10 @@ export const frames: FrameConfig[] = [
   },
   {
     name: 'goPerform',
-    selector: 'iframe[src="https://onecognizantbcazrapps.cognizant.com/2394"]'
+    selector: `iframe[src="${supportedApps['Go Perform'].url}"]`
   },
   {
     name: 'myLearningStudio',
-    selector: 'iframe[src="https://onecognizantazrapps.cognizant.com/1738"]'
+    selector: `iframe[src="${supportedApps['My Learning Studio'].url}"]`
   }
 ];

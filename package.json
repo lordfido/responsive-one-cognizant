@@ -16,6 +16,7 @@
     "dev": "webpack --config ./webpack.config.dev.js --watch"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
     "cpy-cli": "^5.0.0",
     "css-loader": "^6.10.0",
     "file-loader": "^6.2.0",
