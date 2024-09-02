@@ -19,14 +19,27 @@ html > body {
       & > .careerTabsContainer {
         & > .tabsContainer > .contentTabs {
           height: auto;
+        }
+      }
 
-          & > .mCustomScrollbar {
-            max-height: none !important;
+      & > .modal > .modal-dialog > .modal-content > .modal-body {
+        max-height: calc(100vh - 40px - 60px); // Margins and Header size
+        overflow: hidden;
+        overflow-y: auto;
+      }
 
-            & > .mCSB_scrollTools {
-              display: none !important;
-            }
-          }
+      .mCustomScrollbar {
+        height: auto !important;
+        max-height: none !important;
+        margin: 20px !important;
+        width: calc(100% - 40px) !important;
+
+        & > .mCSB_container {
+          top: 0 !important;
+        }
+
+        & > .mCSB_scrollTools {
+          display: none !important;
         }
       }
     }
