@@ -1,17 +1,11 @@
-import { loadMyLearningStudioCss } from './common';
+import { useFrameInit } from '../../utils';
 import './myLearningStudio';
 
 const init = () => {
-  const handleOnLoad = () => {
-    loadMyLearningStudioCss();
-    // removeHardcodedSizes(document);
-  };
-
-  document.onload = () => {
-    handleOnLoad();
-  };
-
-  handleOnLoad();
+  useFrameInit({
+    frameName: 'myLearningStudio',
+    handleOnLoad: () => {}
+  });
 };
 
 init();

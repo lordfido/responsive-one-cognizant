@@ -1,5 +1,3 @@
-import { loadFile } from '../../utils';
-
 const removeHardcodedHeights = (doc: Document) => {
   const router = doc.querySelector('#routerWrapper > div') as HTMLElement;
   if (router) {
@@ -22,11 +20,4 @@ export const removeHardcodedSizes = (doc: Document) => {
     removeHardcodedHeights(doc);
     removeHardcodedWidths(doc);
   }, 500);
-};
-
-export const loadMyLearningStudioCss = (doc: Document = document) => {
-  loadFile({
-    doc,
-    cssFileName: 'myLearningStudio.css'
-  });
 };

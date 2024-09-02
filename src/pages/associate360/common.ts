@@ -1,5 +1,3 @@
-import { loadFile } from '../../utils';
-
 const removeHardcodedHeights = (doc: Document) => {};
 
 const removeHardcodedWidths = (doc: Document) => {};
@@ -12,11 +10,4 @@ export const removeHardcodedSizes = (doc: Document) => {
     removeHardcodedHeights(doc);
     removeHardcodedWidths(doc);
   }, 500);
-};
-
-export const loadAssociate360Css = (doc: Document = document) => {
-  loadFile({
-    doc,
-    cssFileName: 'associate360.css'
-  });
 };

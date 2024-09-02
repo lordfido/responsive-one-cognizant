@@ -1,17 +1,14 @@
-import { loadAssociate360Css, removeHardcodedSizes } from './common';
+import { useFrameInit } from '../../utils';
 import './associate360';
+import { removeHardcodedSizes } from './common';
 
 const init = () => {
-  const handleOnLoad = () => {
-    loadAssociate360Css();
-    removeHardcodedSizes(document);
-  };
-
-  document.onload = () => {
-    handleOnLoad();
-  };
-
-  handleOnLoad();
+  useFrameInit({
+    frameName: 'associate360',
+    handleOnLoad: () => {
+      removeHardcodedSizes(document);
+    }
+  });
 };
 
 init();

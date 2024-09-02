@@ -1,5 +1,3 @@
-import { loadFile } from '../../utils';
-
 const removeHardcodedHeights = (doc: Document) => {
   const myTeamsTable = doc.querySelector(
     '#goals-supervisor > .second-table-container'
@@ -40,11 +38,4 @@ export const removeHardcodedSizes = (doc: Document) => {
     removeHardcodedHeights(doc);
     removeHardcodedWidths(doc);
   }, 500);
-};
-
-export const loadGoPerformCss = (doc: Document = document) => {
-  loadFile({
-    doc,
-    cssFileName: 'goPerform.css'
-  });
 };
