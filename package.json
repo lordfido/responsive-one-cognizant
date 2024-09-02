@@ -7,12 +7,12 @@
   "scripts": {
     "clear:build": "rimraf ./build",
     "clear:dist": "rimraf ./dist",
-    "clear": "yarn run clear:build && yarn run clear:dist",
+    "clear": "npm run clear:build && npm run clear:dist",
     "copy-manifest:build": "cpy --flat ./src/manifest.json ./build",
     "copy-manifest:dist": "cpy --flat ./src/manifest.json ./dist",
-    "prebuild": "yarn run clear:build && yarn run copy-manifest:build",
+    "prebuild": "npm run clear:build && npm run copy-manifest:build",
     "build": "webpack --config ./webpack.config.prod.js",
-    "predev": "yarn run clear:dist && yarn run copy-manifest:dist",
+    "predev": "npm run clear:dist && npm run copy-manifest:dist",
     "dev": "webpack --config ./webpack.config.dev.js --watch"
   },
   "devDependencies": {
