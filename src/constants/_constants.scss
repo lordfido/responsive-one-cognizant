@@ -1,18 +1,31 @@
 $pageMaxWidth: 1280px;
 
+$cognizantBlue: #2e308e;
+
 $white: #fff;
 $falseWhite: #f2f2f2;
+$grey: #dcdcdc;
 
-$cognizantBlue: #2e308e;
-$cognizantBlueDark: #000048;
+$tabBackgroundBlue: #e6eff6;
 
-$tableHeadingBorderColor: var(--accent1-dark);
+$accentBlueLight: #6aa2dc;
+$accentBlue: #2f78c4;
+$accentBlueDark: $cognizantBlue;
+
+$darkBlue: #000048;
+
+$tableHeadingBorderColor: $cognizantBlue;
 $tableHeadingBorderColorWarning: var(--yellow);
 $tableHeadingBorderColorSuccess: var(--green);
-$tableContentBorderColor: #dcdcdc;
+$tableContentBorderColor: $grey;
 
 $backdropOpacity: 0.7;
 $modalBackdrop: rgba(0, 0, 0, $backdropOpacity);
 
+$borderRadius: 6px;
+$cardBorderRadius: $borderRadius;
+$dropdownBorderRadius: $borderRadius;
+
 $inputBackground: $falseWhite;
-$inputColor: $cognizantBlueDark;
+$inputBorderRadius: $borderRadius;
+$inputColor: $darkBlue;

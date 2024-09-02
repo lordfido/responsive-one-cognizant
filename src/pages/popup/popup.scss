@@ -28,7 +28,7 @@ body {
 }
 
 .Window {
-  border: 1px solid $cognizantBlueDark;
+  border: 1px solid $darkBlue;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@ body {
   width: 100%;
 
   &__Title {
-    background-color: $cognizantBlueDark;
+    background-color: $darkBlue;
     color: $white;
     cursor: default;
     padding: 8px;
@@ -53,7 +53,7 @@ body {
 }
 
 .List {
-  color: $cognizantBlueDark;
+  color: $darkBlue;
   font-weight: bold;
   margin: 0 auto;
 

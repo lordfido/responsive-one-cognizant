@@ -6,15 +6,122 @@ html > body {
   & > div {
     & > .wrapper {
       height: auto;
-      width: auto;
       max-width: $pageMaxWidth;
+      overflow-y: auto;
+      width: auto;
 
       & > .header_A360 {
+        align-items: center;
         box-shadow: none;
+        display: flex;
+        flex-direction: row;
+
+        & > div {
+          align-items: center;
+          display: inline-flex;
+          flex-direction: row;
+          float: none;
+          width: auto;
+        }
+
+        .headerCommon {
+          & > .viewHead {
+            align-items: center;
+            display: inline-flex;
+            flex-direction: row;
+            float: none;
+            left: initial;
+            position: relative !important;
+
+            &,
+            &:hover {
+              margin: 12px !important;
+              margin-bottom: 0 !important;
+              padding: 4px 8px !important;
+
+              & > span:nth-child(1) {
+                margin-left: 0 !important;
+              }
+            }
+          }
+
+          & > .dropdown {
+            &,
+            &:hover {
+              & > .dropdown-content > ul > li {
+                padding: 12px 6px !important;
+              }
+            }
+
+            & > .dropdown-content {
+              border: 1px solid $tableContentBorderColor;
+              border-radius: $dropdownBorderRadius;
+              top: 100%;
+              position: absolute;
+
+              ul {
+                float: none;
+                margin-bottom: 0;
+
+                .submenu {
+                  border: 1px solid $tableContentBorderColor;
+                  border-radius: $dropdownBorderRadius;
+                  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                  left: 100%;
+                  top: 0;
+                }
+              }
+            }
+          }
+        }
+
+        #IconHeaderTab {
+          flex: 1;
+          flex-direction: row-reverse;
+
+          .settings_A360,
+          .apnLink,
+          .microSite,
+          .searchBar_A360 {
+            float: none;
+            margin: 0 8px;
+          }
+
+          .settings_A360,
+          .apnLink,
+          .microSite {
+            height: 24px;
+            width: 24px;
+          }
+
+          .settings_A360 {
+            background-position: -219px -42px;
+          }
+
+          .microSite {
+            background-position: -160px -329px;
+          }
+
+          .searchBar_A360 {
+            border-radius: $inputBorderRadius;
+          }
+        }
       }
 
       & > .associateProfile_A360 {
         width: 100%;
+
+        & > .associateDetails_A360 {
+          & > .assocImageContain {
+            border-bottom-left-radius: $cardBorderRadius;
+            border-top-left-radius: $cardBorderRadius;
+          }
+
+          & > .assocDataContain {
+            border-bottom-right-radius: $cardBorderRadius;
+            border-top-right-radius: $cardBorderRadius;
+          }
+        }
       }
 
       & > .cardsParent {
@@ -22,6 +129,11 @@ html > body {
 
         .cardsContainer_A360 {
           padding: 0;
+
+          .cards_A360 {
+            border-radius: $cardBorderRadius;
+            transition: box-shadow 0.2s;
+          }
         }
       }
 
@@ -29,6 +141,41 @@ html > body {
       & > .careerTabsContainer {
         & > .tabsContainer > .contentTabs {
           height: auto;
+
+          & > .contentDefaultTabs {
+            .contentCommonTabs {
+              border-radius: $cardBorderRadius;
+              overflow: hidden;
+
+              &:not(:has(div.openAccord)) {
+                border-color: $tableHeadingBorderColor;
+              }
+
+              & > .contentCommonHeader {
+                align-items: center;
+                cursor: pointer;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 12px 24px;
+
+                & > span:nth-child(1) {
+                  color: $white;
+                  font-weight: bold;
+                }
+
+                & > .accordIcon {
+                  position: relative;
+                  right: initial;
+                  top: initial;
+                }
+              }
+
+              .accordContainer {
+                padding: 0;
+              }
+            }
+          }
         }
       }
 
