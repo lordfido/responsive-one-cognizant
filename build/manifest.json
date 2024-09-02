@@ -29,6 +29,14 @@
       "js": [
         "/js/myLearningStudio.js"
       ]
+    },
+    {
+      "matches": [
+        "https://onecognizantbcazrapps.cognizant.com/2736/*"
+      ],
+      "js": [
+        "/js/associate360.js"
+      ]
     }
   ],
   "web_accessible_resources": [
@@ -37,6 +45,7 @@
         "https://onecognizant.cognizant.com/*"
       ],
       "resources": [
+        "/images/*",
         "/css/oneCognizant.css"
       ]
     },
@@ -45,6 +54,7 @@
         "https://onecognizantbcazrapps.cognizant.com/*"
       ],
       "resources": [
+        "/images/*",
         "/css/goPerform.css"
       ]
     },
@@ -53,7 +63,17 @@
         "https://onecognizantazrapps.cognizant.com/*"
       ],
       "resources": [
+        "/images/*",
         "/css/myLearningStudio.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://onecognizantbcazrapps.cognizant.com/*"
+      ],
+      "resources": [
+        "/images/*",
+        "/css/associate360.css"
       ]
     }
   ],
