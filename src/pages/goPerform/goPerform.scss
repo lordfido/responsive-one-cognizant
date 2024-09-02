@@ -939,5 +939,5 @@ div.notenabled {
 /* Loading modal */
 div#body > section > #ecmoverlay {
   position: fixed !important;
-  opacity: 0.6 !important;
+  opacity: $backdropOpacity !important;
 }

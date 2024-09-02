@@ -11,5 +11,8 @@ $tableHeadingBorderColorWarning: var(--yellow);
 $tableHeadingBorderColorSuccess: var(--green);
 $tableContentBorderColor: #dcdcdc;
 
+$backdropOpacity: 0.7;
+$modalBackdrop: rgba(0, 0, 0, $backdropOpacity);
+
 $inputBackground: $falseWhite;
 $inputColor: $cognizantBlueDark;

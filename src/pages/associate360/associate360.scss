@@ -6,13 +6,23 @@ html > body {
   & > div {
     & > .wrapper {
       height: auto;
+      width: auto;
+      max-width: $pageMaxWidth;
 
       & > .header_A360 {
         box-shadow: none;
       }
 
+      & > .associateProfile_A360 {
+        width: 100%;
+      }
+
       & > .cardsParent {
         height: auto !important;
+
+        .cardsContainer_A360 {
+          padding: 0;
+        }
       }
 
       & > .viewTabsContainer,
@@ -22,10 +32,15 @@ html > body {
         }
       }
 
-      & > .modal > .modal-dialog > .modal-content > .modal-body {
-        max-height: calc(100vh - 40px - 60px); // Margins and Header size
-        overflow: hidden;
-        overflow-y: auto;
+      & > .modal > .modal-dialog {
+        margin: 20px auto !important;
+        max-width: calc($pageMaxWidth) !important;
+
+        & > .modal-content > .modal-body {
+          max-height: calc(100vh - 40px - 60px); // Margins and Header size
+          overflow: hidden;
+          overflow-y: auto;
+        }
       }
 
       .mCustomScrollbar {
@@ -46,7 +61,7 @@ html > body {
 
     & > #ajaxdownLoadingImage,
     & > #ajaxLoadingImage {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: $modalBackdrop;
       opacity: 1;
 
       & > p {
@@ -61,6 +76,14 @@ html > body {
       & > p:nth-child(2) {
         top: 50% !important;
       }
+    }
+  }
+
+  & > .modal-backdrop {
+    background-color: $modalBackdrop;
+
+    &.show {
+      opacity: 1;
     }
   }
 }
