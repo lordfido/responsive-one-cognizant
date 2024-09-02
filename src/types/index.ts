@@ -1,4 +1,8 @@
-export type FrameName = 'rootLink' | 'goPerform' | 'myLearningStudio';
+export type FrameName =
+  | 'rootLink'
+  | 'goPerform'
+  | 'myLearningStudio'
+  | 'associate360';
 
 export interface FrameConfig {
   name: FrameName;

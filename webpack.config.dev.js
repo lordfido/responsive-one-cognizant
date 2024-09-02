@@ -10,7 +10,8 @@ module.exports = {
     popup: path.resolve(pagesPath, 'popup/index.ts'),
     oneCognizant: path.resolve(pagesPath, 'oneCognizant/index.ts'),
     goPerform: path.resolve(pagesPath, 'goPerform/index.ts'),
-    myLearningStudio: path.resolve(pagesPath, 'myLearningStudio/index.ts')
+    myLearningStudio: path.resolve(pagesPath, 'myLearningStudio/index.ts'),
+    associate360: path.resolve(pagesPath, 'associate360/index.ts')
   },
   output: {
     filename: '[name].js',

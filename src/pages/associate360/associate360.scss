@@ -1,0 +1,53 @@
+@import '../../constants/constants';
+
+html > body {
+  background: $white;
+
+  & > div {
+    & > .wrapper {
+      height: auto;
+
+      & > .header_A360 {
+        box-shadow: none;
+      }
+
+      & > .cardsParent {
+        height: auto !important;
+      }
+
+      & > .viewTabsContainer,
+      & > .careerTabsContainer {
+        & > .tabsContainer > .contentTabs {
+          height: auto;
+
+          & > .mCustomScrollbar {
+            max-height: none !important;
+
+            & > .mCSB_scrollTools {
+              display: none !important;
+            }
+          }
+        }
+      }
+    }
+
+    & > #ajaxdownLoadingImage,
+    & > #ajaxLoadingImage {
+      background-color: rgba(0, 0, 0, 0.8);
+      opacity: 1;
+
+      & > p {
+        margin-bottom: 0;
+      }
+
+      & > p:nth-child(1) {
+        top: 50%;
+        transform: translateY(-100%);
+      }
+
+      & > p:nth-child(2) {
+        top: 50% !important;
+      }
+    }
+  }
+}

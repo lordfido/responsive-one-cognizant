@@ -29,6 +29,14 @@
       "js": [
         "/js/myLearningStudio.js"
       ]
+    },
+    {
+      "matches": [
+        "https://onecognizantbcazrapps.cognizant.com/2736/*"
+      ],
+      "js": [
+        "/js/associate360.js"
+      ]
     }
   ],
   "web_accessible_resources": [
@@ -54,6 +62,14 @@
       ],
       "resources": [
         "/css/myLearningStudio.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://onecognizantbcazrapps.cognizant.com/*"
+      ],
+      "resources": [
+        "/css/associate360.css"
       ]
     }
   ],

@@ -12,6 +12,10 @@ export const supportedApps: SupportedApps = {
   'My Learning Studio': {
     icon: require('../assets/icons/myLearningStudio.png'),
     url: 'https://onecognizantazrapps.cognizant.com/1738'
+  },
+  'Associate 360': {
+    icon: require('../assets/icons/associate360.png'),
+    url: 'https://onecognizantbcazrapps.cognizant.com/2736'
   }
 };
 
@@ -27,5 +31,9 @@ export const frames: FrameConfig[] = [
   {
     name: 'myLearningStudio',
     selector: `iframe[src="${supportedApps['My Learning Studio'].url}"]`
+  },
+  {
+    name: 'associate360',
+    selector: `iframe[src="${supportedApps['Associate 360'].url}"]`
   }
 ];
