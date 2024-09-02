@@ -1,8 +1,6 @@
-export type FrameName =
-  | 'rootLink'
-  | 'associate360'
-  | 'goPerform'
-  | 'myLearningStudio';
+type AppName = 'associate360' | 'goPerform' | 'myLearningStudio';
+
+export type FrameName = AppName | 'rootLink';
 
 export interface FrameConfig {
   name: FrameName;
@@ -11,7 +9,8 @@ export interface FrameConfig {
 
 export interface SupportedApp {
   icon: string;
+  name: string;
   url: string;
 }
 
-export type SupportedApps = Record<string, SupportedApp>;
+export type SupportedApps = Record<FrameName, SupportedApp>;

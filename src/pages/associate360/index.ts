@@ -1,12 +1,26 @@
-import { useFrameInit } from '../../utils';
+import { DEBUG_RECURSIVE } from '../../constants';
+import { useAppInit } from '../../hooks';
+import { createDebouncedInterval, log } from '../../utils';
 import './associate360';
-import { removeHardcodedSizes } from './common';
+
+const debounce = createDebouncedInterval();
+
+const removeHardcodedHeights = () => {};
+
+const removeHardcodedWidths = () => {};
 
 const init = () => {
-  useFrameInit({
+  useAppInit({
     frameName: 'associate360',
     handleOnLoad: () => {
-      removeHardcodedSizes(document);
+      debounce(() => {
+        if (DEBUG_RECURSIVE) {
+          log('removeHardcodedSizes');
+        }
+
+        removeHardcodedHeights();
+        removeHardcodedWidths();
+      });
     }
   });
 };

@@ -1,7 +1,7 @@
-const debug = false;
+import { DEBUG } from '../constants';
 
 export const log = (...args: unknown[]) => {
-  if (debug) {
-    console.log(...args);
+  if (DEBUG) {
+    console.log('[ROC]', ...args);
   }
-}
+};

@@ -1,13 +1,15 @@
 import { supportedApps } from '../../constants';
 import { RenderListProps } from './types';
 import './popup.scss';
+import { log } from '../../utils';
 
 const renderListItem = (
-  { icon, name, url }: RenderListProps,
+  { icon, id, name, url }: RenderListProps,
   parent: HTMLElement
 ) => {
+  log('renderListItem', id);
   const wrapper = document.createElement('div');
-  wrapper.id = name;
+  wrapper.id = id;
   wrapper.classList.add('List__Item', 'Item');
   wrapper.onclick = () => {
     if (window.chrome.tabs) {
@@ -32,11 +34,12 @@ const renderListItem = (
 };
 
 const renderList = () => {
+  log('renderList');
   const wrapper = document.createElement('div');
   wrapper.classList.add('List');
 
-  Object.entries(supportedApps).forEach(([name, { icon, url }]) => {
-    renderListItem({ icon, name, url }, wrapper);
+  Object.entries(supportedApps).forEach(([id, { icon, name, url }]) => {
+    renderListItem({ icon, id, name, url }, wrapper);
   });
 
   const root = document.getElementById('root');
