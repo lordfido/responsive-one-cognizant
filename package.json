@@ -8,11 +8,10 @@
     "clear:build": "rimraf ./build",
     "clear:dist": "rimraf ./dist",
     "clear": "npm run clear:build && npm run clear:dist",
-    "copy-manifest:build": "cpy --flat ./src/manifest.json ./build",
-    "copy-manifest:dist": "cpy --flat ./src/manifest.json ./dist",
-    "prebuild": "npm run clear && npm run copy-manifest:build",
+    "copy-manifest": "cpy --flat ./src/manifest.json ./dist",
+    "prebuild": "npm run clear && npm run copy-manifest",
     "build": "webpack --config ./webpack.config.prod.js",
-    "predev": "npm run clear && npm run copy-manifest:dist",
+    "predev": "npm run clear && npm run copy-manifest",
     "dev": "webpack --config ./webpack.config.dev.js --watch"
   },
   "devDependencies": {
