@@ -31,9 +31,11 @@ $zIndexes: (
   'tutorial': 6
 );
 
+$cardBg: $white;
 $cardBorder: $lightGrey;
 $cardBorderRadius: $borderRadius;
 $cardHeadingBg: $lightGrey;
+$cardShadow: 0px 0px 3px $grey;
 
 $inputBackground: $falseWhite;
 $inputBorderRadius: $borderRadius;

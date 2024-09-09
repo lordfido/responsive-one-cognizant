@@ -1,6 +1,11 @@
 @import '../../constants/constants';
 @import '../../constants/mixins';
 
+$mobileL: 521px;
+$tablet: 700px;
+$desktop: 1024px;
+$desktopL: 1328px;
+
 html,
 body,
 div#body,
@@ -117,7 +122,7 @@ nav-menu > .nav-menu-wrap {
           right: initial;
           top: 0;
 
-          @media screen and (min-width: 1024px) {
+          @media screen and (min-width: $mobileL) {
             left: 50%;
             transform: translateX(-50%);
           }
@@ -309,10 +314,6 @@ nav-menu > .nav-menu-wrap {
   max-width: $pageMaxWidth;
   padding: 12px 24px;
   width: 100%;
-
-  @media (min-width: 1200px) {
-    width: 100%;
-  }
 }
 
 .routerContainer {
@@ -331,33 +332,137 @@ nav-menu > .nav-menu-wrap {
     }
 
     .dashboard-container {
-      @media only screen and (max-width: 1328px) {
-        padding: 0 24px;
+      @media only screen and (max-width: $desktopL) {
+        padding: 0 12px;
+
+        @media screen and (min-width: $desktop) {
+          padding: 0 24px;
+        }
       }
 
       learningdashboard > div {
-        margin-top: 24px;
+        margin-top: 12px;
         margin-bottom: 0;
+
+        @media screen and (min-width: $desktop) {
+          margin-top: 12px;
+        }
 
         & > .learning-container {
           float: none;
           max-width: 100%;
 
           & > div {
-            float: left;
+            display: inline-block;
+            float: none;
             margin: 12px;
             max-width: calc(100% - 24px);
+            vertical-align: top;
             width: 100%;
 
-            @media screen and (min-width: 700px) {
+            @media screen and (min-width: $tablet) {
               max-width: calc(50% - 24px);
             }
 
-            & > .learning-wrapper {
-              margin-bottom: 0;
+            @media screen and (min-width: $desktop) {
+              max-width: calc(33% - 24px);
+            }
+          }
 
-              & > .d-flex {
-                flex-direction: column;
+          & > div:first-of-type > .learning-wrapper {
+            @include card-spaced;
+            float: none;
+            margin-bottom: 0;
+
+            & > div:nth-of-type(1) > span {
+              align-items: center;
+              display: flex;
+              float: none !important;
+
+              & > * {
+                float: none;
+              }
+            }
+
+            & > .d-flex {
+              flex-direction: column;
+            }
+          }
+
+          & > .gamification-banner {
+            @include card-spaced;
+
+            & > .header-row {
+              position: relative;
+
+              & > .c-txt1,
+              & > .circular-progress-bar {
+                height: 100px;
+                left: 0;
+                top: 0;
+                width: 100px !important;
+              }
+
+              & > .c-txt1 {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                padding: 12px;
+                z-index: map-get($zIndexes, 'sidebar');
+              }
+
+              & > .circular-progress-bar {
+                z-index: map-get($zIndexes, 'content');
+              }
+
+              & > .txt-wrap {
+                align-items: center;
+                display: flex;
+                flex: 1;
+                justify-content: center;
+                padding-left: 0;
+                width: auto;
+                z-index: map-get($zIndexes, 'sidebar');
+
+                & > .highlight {
+                  margin: 0 !important;
+                }
+              }
+
+              & > .coinImage {
+                aspect-ratio: 106 / 91;
+                height: 100px !important;
+                margin-top: 0 !important;
+                width: auto !important;
+              }
+
+              & > .pointsAvailable {
+                left: initial;
+                right: 40px;
+                top: 56px;
+              }
+            }
+
+            & > .bottom-wrap > button {
+              margin-left: 0 !important;
+              width: 100%;
+            }
+          }
+
+          & > .learning-status {
+            @include card-spaced;
+
+            & > .topsection,
+            & > .bottomsection {
+              float: none;
+            }
+
+            & > .topsection {
+              align-items: center;
+              display: flex;
+
+              & > span {
+                float: none;
               }
             }
           }
