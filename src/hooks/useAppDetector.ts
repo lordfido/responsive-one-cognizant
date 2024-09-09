@@ -5,7 +5,7 @@ import { useNewWindow } from './useNewWindow';
 
 export const useAppDetector = (frameName: FrameName) => {
   // Keep looking for the current app
-  const delay = createDelay(undefined);
+  const delay = createDelay();
   delay(() => {
     useAppDetector(frameName);
   });
