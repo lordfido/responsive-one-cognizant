@@ -8,6 +8,12 @@
   filter: brightness(10) saturate(0);
 }
 
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @mixin scrollbars {
   .mCustomScrollbar {
     height: auto !important;
@@ -16,11 +22,13 @@
     width: calc(100% - 40px) !important;
 
     & > .mCustomScrollBox {
-      max-height: none;
+      max-height: none !important;
     }
 
+    & > .mCustomScrollBox > .mCSB_container,
     & > .mCSB_container {
       top: 0 !important;
+      overflow-y: auto;
     }
 
     & > .mCSB_scrollTools {
