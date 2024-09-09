@@ -1,7 +1,12 @@
 @import '../../constants/constants';
+@import '../../constants/mixins';
 
 html > body {
   background: $white;
+
+  a {
+    color: $teal !important;
+  }
 
   & > div {
     & > .wrapper {
@@ -15,6 +20,7 @@ html > body {
         box-shadow: none;
         display: flex;
         flex-direction: row;
+        z-index: map-get($zIndexes, 'header');
 
         & > div {
           align-items: center;
@@ -63,7 +69,11 @@ html > body {
                 float: none;
                 margin-bottom: 0;
 
-                .submenu {
+                & > li {
+                  cursor: pointer !important;
+                }
+
+                & > li > ul.submenu {
                   border: 1px solid $tableContentBorderColor;
                   border-radius: $dropdownBorderRadius;
                   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -109,7 +119,9 @@ html > body {
       }
 
       & > .associateProfile_A360 {
+        position: relative;
         width: 100%;
+        z-index: map-get($zIndexes, 'content');
 
         & > .associateDetails_A360 {
           & > .assocImageContain {
@@ -126,13 +138,19 @@ html > body {
 
       & > .cardsParent {
         height: auto !important;
+        z-index: map-get($zIndexes, 'content');
 
         .cardsContainer_A360 {
           padding: 0;
 
           .cards_A360 {
+            border-color: $cardBorder;
             border-radius: $cardBorderRadius;
             transition: box-shadow 0.2s;
+
+            .headDiv {
+              background-color: $cardHeadingBg;
+            }
           }
         }
       }
@@ -143,31 +161,97 @@ html > body {
           height: auto;
 
           & > .contentDefaultTabs {
-            .contentCommonTabs {
-              border-radius: $cardBorderRadius;
-              overflow: hidden;
+            margin: 0 auto !important;
+            padding: 20px 0;
+            width: 100% !important;
 
-              &:not(:has(div.openAccord)) {
-                border-color: $tableHeadingBorderColor;
+            .contentCommonTabs {
+              border-color: $cardBorder;
+              border-radius: $cardBorderRadius;
+              min-height: 0;
+              overflow: hidden;
+              width: 100%;
+
+              &:empty {
+                display: none;
               }
 
               & > .contentCommonHeader {
                 align-items: center;
+                background-color: $cardHeadingBg;
+                color: $darkBlue;
                 cursor: pointer;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: flex-start;
+                margin: 0;
                 padding: 12px 24px;
+                width: 100%;
+
+                & > span {
+                  color: inherit !important;
+                  margin-right: 12px;
+                }
 
                 & > span:nth-child(1) {
-                  color: $white;
                   font-weight: bold;
                 }
 
-                & > .accordIcon {
-                  position: relative;
-                  right: initial;
-                  top: initial;
+                & > .accordIcon,
+                & > .addIcn,
+                & > .editIcn,
+                & > .deleteIcn,
+                & > .legend {
+                  position: relative !important;
+                  right: initial !important;
+                  top: initial !important;
+                }
+
+                & > .accordIcon,
+                & > .addIcn,
+                & > .editIcn,
+                & > .deleteIcn {
+                  @include black-icon;
+                }
+
+                & > [data-toggle='modal']:first-of-type {
+                  margin-left: auto;
+                }
+
+                & > .legend {
+                  align-items: center;
+                  display: inline-flex;
+                  margin-left: 12px;
+
+                  & > .box,
+                  & > .legendTxt {
+                    float: none;
+                  }
+
+                  & > .box {
+                    display: inline-block;
+                    margin-right: 12px;
+                    top: 0;
+                  }
+
+                  & > .legendTxt {
+                    left: 0 !important;
+                  }
+                }
+              }
+
+              & > .contentDiv {
+                min-height: 0 !important;
+
+                &:empty {
+                  padding: 0;
+                }
+              }
+
+              .accordHeader {
+                & > span {
+                  color: $darkBlue;
+                  margin-right: 12px;
                 }
               }
 
@@ -176,34 +260,18 @@ html > body {
               }
             }
           }
+
+          #passportprofiletab > .contentCommonTabs > .contentCommonHeader {
+            justify-content: initial;
+          }
         }
       }
 
-      & > .modal > .modal-dialog {
-        margin: 20px auto !important;
-        max-width: calc($pageMaxWidth) !important;
-
-        & > .modal-content > .modal-body {
-          max-height: calc(100vh - 40px - 60px); // Margins and Header size
-          overflow: hidden;
-          overflow-y: auto;
-        }
+      & > .modal {
+        @include modal;
       }
 
-      .mCustomScrollbar {
-        height: auto !important;
-        max-height: none !important;
-        margin: 20px !important;
-        width: calc(100% - 40px) !important;
-
-        & > .mCSB_container {
-          top: 0 !important;
-        }
-
-        & > .mCSB_scrollTools {
-          display: none !important;
-        }
-      }
+      @include scrollbars;
     }
 
     & > #ajaxdownLoadingImage,
@@ -226,11 +294,5 @@ html > body {
     }
   }
 
-  & > .modal-backdrop {
-    background-color: $modalBackdrop;
-
-    &.show {
-      opacity: 1;
-    }
-  }
+  @include modal-backdrop;
 }
