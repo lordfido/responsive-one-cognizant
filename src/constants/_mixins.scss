@@ -1,0 +1,99 @@
+@import './constants';
+
+@mixin black-icon {
+  filter: brightness(0) saturate(0);
+}
+
+@mixin white-icon {
+  filter: brightness(10) saturate(0);
+}
+
+@mixin scrollbars {
+  .mCustomScrollbar {
+    height: auto !important;
+    max-height: none !important;
+    margin: 20px !important;
+    width: calc(100% - 40px) !important;
+
+    & > .mCustomScrollBox {
+      max-height: none;
+    }
+
+    & > .mCSB_container {
+      top: 0 !important;
+    }
+
+    & > .mCSB_scrollTools {
+      display: none !important;
+    }
+  }
+}
+
+@mixin modal-backdrop {
+  .modal-backdrop {
+    background-color: $modalBackdrop !important;
+
+    &.show {
+      opacity: 1 !important;
+    }
+  }
+}
+
+@mixin modal {
+  padding: 0 !important;
+
+  .modal-dialog {
+    height: $modalHeight !important;
+    left: $modalLeft !important;
+    margin: $modalMargin !important;
+    max-height: $modalMaxHeight !important;
+    max-width: $modalMaxWidth;
+    overflow: hidden;
+    padding: 20px;
+    position: fixed;
+    top: $modalTop !important;
+    transform: $modalTransform !important;
+    width: $modalWidth;
+
+    & > .modal-content {
+      background-color: transparent;
+      border-radius: $modalBorderRadius;
+
+      height: auto;
+      max-height: 100%;
+      overflow: hidden;
+
+      .modal-header {
+        background-color: $modalHeaderBg;
+        border-radius: 0;
+        min-height: $modalHeaderHeight;
+
+        .close {
+          line-height: 1rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          display: inline-block;
+          margin: 0 !important;
+          margin-right: 12px !important;
+          vertical-align: middle;
+          width: auto;
+        }
+      }
+
+      & > .modal-body {
+        background-color: $modalBg;
+        height: auto;
+        max-height: calc($modalMaxHeight - $modalHeaderHeight - 40px);
+        overflow: hidden;
+        overflow-y: auto;
+        padding: 20px;
+      }
+    }
+  }
+}
