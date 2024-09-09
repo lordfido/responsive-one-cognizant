@@ -16,7 +16,7 @@ div#body > section > .main {
   width: 100%;
 }
 
-// Spam navigation icons
+// Main Header
 app-live-search > .main > .header {
   display: flex;
   max-width: $pageMaxWidth !important;
@@ -42,6 +42,7 @@ app-live-search > .main > .header {
   }
 }
 
+// Breadcrumbs
 nav-menu > .nav-menu-wrap {
   float: none !important;
 
@@ -101,6 +102,10 @@ nav-menu > .nav-menu-wrap {
       & > .searchForm {
         float: none;
         position: relative;
+
+        & > .curtainEffect {
+          display: none !important;
+        }
 
         & > .searchWrapper {
           align-items: center;
@@ -319,21 +324,10 @@ nav-menu > .nav-menu-wrap {
   }
 
   & > #routerWrapper {
-    overflow: hidden !important;
-    overflow-y: auto !important;
-
     & > .mCustomScrollBox,
     & > preferences-view > .preferences-container {
       max-width: $pageMaxWidth;
       margin: 0 auto;
-    }
-
-    & > .mCustomScrollBox {
-      max-height: none !important;
-
-      & + .mCSB_1_scrollbar {
-        display: none !important;
-      }
     }
 
     .dashboard-container {
