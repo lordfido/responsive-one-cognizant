@@ -1,0 +1,11 @@
+// Modals
+.modal,
+&
+  > #routerWrapper
+  .dashboard-container
+  learningdashboard
+  > .outer-container
+  #connectModal.modal {
+  @include modal;
+  @include scrollbars;
+}

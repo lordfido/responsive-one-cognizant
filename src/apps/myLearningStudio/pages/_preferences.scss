@@ -1,0 +1,79 @@
+& > preferences-view > .preferences-container {
+  float: none;
+  padding: 0;
+
+  .nav-wrapper {
+    border-bottom: 1px solid $accentBlue;
+    float: none;
+
+    .nav {
+      float: none;
+      width: 100%;
+
+      @media screen and (max-width: $mobileMax) {
+        margin-bottom: 0;
+      }
+
+      & > .nav-item > .nav-link {
+        margin-bottom: 0;
+
+        &,
+        &:hover {
+          border-bottom: 5px solid transparent !important;
+        }
+
+        &.active {
+          border-color: $accentBlue !important;
+          color: $accentBlue !important;
+        }
+      }
+    }
+  }
+
+  .contributionContainer,
+  .interestContainer {
+    border: none;
+    float: none;
+  }
+
+  .contributionContainer > contribution > .contribution-wrapper,
+  .interestContainer > add-interests > .interests-wrapper {
+    display: flex;
+    flex-direction: column;
+    float: none;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+    }
+
+    & > .leftSection,
+    & > .rightSection {
+      float: none;
+    }
+
+    & > .leftSection {
+      flex: 1;
+      height: auto;
+      padding: 20px;
+      max-height: none;
+      min-height: 0;
+      width: 100%;
+    }
+
+    & > .rightSection {
+      flex: 0;
+      height: auto;
+      width: 100%;
+
+      @media screen and (min-width: $tablet) {
+        width: auto;
+      }
+
+      & > .img-wrapper {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 300px;
+      }
+    }
+  }
+}

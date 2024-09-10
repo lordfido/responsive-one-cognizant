@@ -1,0 +1,25 @@
+// Main Header
+app-live-search > .main > .header {
+  display: flex;
+  max-width: $pageMaxWidth !important;
+
+  & > .hamburger-menu,
+  & > .logo,
+  & > .icons {
+    float: none !important;
+  }
+
+  & > .icons {
+    margin-left: auto;
+
+    & > .recommandation,
+    & > .tour,
+    & > .social {
+      display: none !important;
+    }
+
+    & > .preferences.PreferenceBlinkAccess {
+      animation: none;
+    }
+  }
+}

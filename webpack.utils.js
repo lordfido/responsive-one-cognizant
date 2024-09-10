@@ -1,13 +1,13 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
-const pagesPath = path.resolve(__dirname, 'src', 'pages');
+const appsPath = path.resolve(__dirname, 'src', 'apps');
 
 const getCopyPlugin = (distPath) =>
   new CopyWebpackPlugin({
     patterns: [
       {
-        from: path.resolve(pagesPath, 'popup/index.html'),
+        from: path.resolve(appsPath, 'popup/index.html'),
         to: path.resolve(distPath, 'popup.html')
       }
     ]
@@ -15,5 +15,5 @@ const getCopyPlugin = (distPath) =>
 
 module.exports = {
   getCopyPlugin,
-  pagesPath
+  appsPath
 };

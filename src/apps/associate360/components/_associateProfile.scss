@@ -1,0 +1,17 @@
+& > .associateProfile_A360 {
+  position: relative;
+  width: 100%;
+  z-index: map-get($zIndexes, 'content');
+
+  & > .associateDetails_A360 {
+    & > .assocImageContain {
+      border-bottom-left-radius: $cardBorderRadius;
+      border-top-left-radius: $cardBorderRadius;
+    }
+
+    & > .assocDataContain {
+      border-bottom-right-radius: $cardBorderRadius;
+      border-top-right-radius: $cardBorderRadius;
+    }
+  }
+}

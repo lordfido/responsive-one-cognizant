@@ -1,0 +1,72 @@
+@import '../../constants/constants';
+@import '../../constants/mixins';
+
+$mobileMax: 520px;
+$mobileL: #{$mobileMax + 1px};
+$tablet: 700px;
+$desktop: 1024px;
+$desktopL: 1328px;
+
+html,
+body,
+div#body,
+div#body > section,
+div#body > section > #ecmoverlay,
+div#body > section > #loading,
+div#body > section > div[role='main'],
+div#body > section > .main {
+  height: auto;
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+
+@import './components/mainHeader.scss';
+@import './components/breadcrumbs.scss';
+
+.header-wrapper {
+  & > header > div > .row > .common-menu-container {
+    margin-bottom: 0;
+  }
+}
+
+.header-wrapper + .container-width {
+  margin: 0 auto;
+  max-width: $pageMaxWidth;
+  padding: 12px 24px;
+  width: 100%;
+}
+
+.routerContainer {
+  @include scrollbars;
+
+  &,
+  & > #routerWrapper {
+    max-width: none !important;
+  }
+
+  & > #routerWrapper {
+    float: none;
+
+    & > .mCustomScrollBox,
+    & > preferences-view > .preferences-container {
+      max-width: $pageMaxWidth;
+      margin: 0 auto;
+    }
+
+    @import './pages/dashboard';
+    @import './pages/preferences';
+    @import './components/modals';
+
+    // Spam popups
+    #feedbackPopupClose,
+    #feedback2,
+    #sliderPopupClose,
+    #livePopup {
+      display: none !important;
+    }
+  }
+}
+
+@include modal-backdrop;
