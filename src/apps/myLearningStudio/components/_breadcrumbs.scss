@@ -7,6 +7,7 @@ nav-menu > .nav-menu-wrap {
     float: none !important;
     height: 100%;
     max-width: $pageMaxWidth !important;
+    overflow-x: auto;
     width: 100%;
 
     & > .breadcrum,
@@ -19,18 +20,16 @@ nav-menu > .nav-menu-wrap {
     & > .breadcrum {
       display: flex;
       flex: 1;
+      overflow: hidden;
 
       & > .home-icon {
         margin-left: 0;
       }
     }
 
-    & > .mobileSearchBtn,
-    & > .desktopsearchBtn {
-      padding-right: 10px;
-    }
-
     & > .mobileSearchBtn {
+      padding-left: 12px;
+
       & > .searchIcon {
         background-position: center center;
         float: none;
@@ -39,6 +38,8 @@ nav-menu > .nav-menu-wrap {
     }
 
     & > .desktopsearchBtn {
+      padding-right: 12px;
+
       & > .mls_search_btn_name {
         display: flex;
         padding: 0 24px;

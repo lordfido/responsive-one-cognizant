@@ -1,0 +1,25 @@
+& {
+  text-align: left;
+  vertical-align: top;
+}
+
+& > .bannersection {
+  float: none;
+}
+
+& > .bottom-section {
+  float: none;
+  min-height: 175px;
+
+  & > .title-sec {
+    display: flex;
+    flex-direction: column;
+    float: none;
+    height: auto;
+
+    & > .title {
+      float: none;
+      height: auto;
+    }
+  }
+}

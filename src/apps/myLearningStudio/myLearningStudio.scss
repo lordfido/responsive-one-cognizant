@@ -22,6 +22,17 @@ div#body > section > .main {
   width: 100%;
 }
 
+body > app-root {
+  &,
+  & > .app-container,
+  & > .app-container > .contentsWrap,
+  & > .app-container > .contentsWrap > .routerContainer {
+    display: block;
+    height: 100%;
+    max-height: none;
+  }
+}
+
 @import './components/mainHeader.scss';
 @import './components/breadcrumbs.scss';
 
@@ -55,7 +66,8 @@ div#body > section > .main {
       margin: 0 auto;
     }
 
-    @import './pages/dashboard';
+    @import './pages/home';
+    @import './pages/learningHub/learningPaths';
     @import './pages/preferences';
     @import './components/modals';
 

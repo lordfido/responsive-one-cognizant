@@ -1,0 +1,303 @@
+& > .topsection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  float: none;
+  margin: 12px 0;
+  padding: 0 12px !important;
+  width: 100%;
+
+  @media screen and (min-width: $mobileL) {
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: initial;
+  }
+
+  & > .pathwayTitleWrapper {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-basis: 100%;
+    float: none;
+    margin: 0;
+    margin-right: 0 !important;
+    padding: 8px 0 !important;
+    width: 100%;
+
+    @media screen and (min-width: $desktop) {
+      flex: 0;
+      flex-basis: initial;
+      padding-top: 0 !important;
+      width: auto;
+    }
+
+    & > .titleContainer {
+      flex: 1;
+      float: none;
+      margin-left: 0;
+      position: relative;
+      width: auto;
+
+      @media screen and (min-width: $desktop) {
+        flex: initial;
+      }
+
+      & > .Allpathwaysdpdwn {
+        align-items: center;
+        display: flex;
+        height: auto;
+        padding: 8px 12px;
+        padding-right: 30px;
+        width: 100%;
+
+        @media screen and (min-width: $desktop) {
+          flex: initial;
+          width: auto;
+        }
+      }
+
+      & > popover-content {
+        display: block;
+        width: 100%;
+
+        & > .popover {
+          left: 0 !important;
+          margin-top: 0;
+          max-width: none;
+          width: 100%;
+
+          .pathway-list {
+            left: 0;
+            min-height: 0;
+            min-width: 0;
+            padding: 8px 0;
+            right: initial;
+            top: 0;
+            width: 100%;
+            z-index: map-get($zIndexes, 'modal');
+          }
+        }
+      }
+    }
+
+    & > .infoContainer {
+      float: none;
+    }
+  }
+
+  & > .createpathwayDiv {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    float: none !important;
+    margin-right: 0 !important;
+    padding: 8px 0 !important;
+    width: 100%;
+
+    @media screen and (min-width: $mobileL) {
+      width: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-left: auto;
+      padding-top: 0 !important;
+    }
+
+    & > button {
+      flex: 1;
+      float: none !important;
+      height: auto;
+    }
+
+    & > .info_desktop {
+      float: none;
+      height: 40px;
+      left: 0 !important;
+      top: 0 !important;
+      width: 40px;
+    }
+  }
+
+  & > .moreOptions {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    float: none;
+    justify-content: flex-end;
+    padding: 8px 0 !important;
+    width: auto;
+
+    @media screen and (min-width: $desktop) {
+      flex: initial;
+      padding-top: 0 !important;
+    }
+
+    & > .optionsDiv {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      flex-direction: row-reverse;
+      float: none;
+      margin-top: 0;
+
+      @media screen and (min-width: $mobileL) {
+        flex: initial;
+      }
+
+      & > .selectedfilters {
+        display: none;
+      }
+
+      & > .filter-btn {
+        float: none;
+        margin-left: auto;
+        position: relative;
+
+        & > img {
+          display: none;
+        }
+
+        & > .filter-icon {
+          background: url(https://onecognizantazrapps.cognizant.com/1738/MLSApp/filter_blue.83079266cd04b42c142c.png)
+            no-repeat 0;
+          float: none;
+          padding-left: 40px;
+          width: auto;
+
+          & > .filterLbl {
+            float: none;
+          }
+        }
+
+        & > [triggers='click'] {
+          display: none !important;
+        }
+
+        & > .fillMain > popover-content {
+          left: initial !important;
+          max-width: 320px;
+          min-width: 320px;
+          position: absolute;
+          right: 0;
+          top: 100% !important;
+
+          @media screen and (min-width: $desktop) {
+            top: calc(100% - 10px) !important;
+          }
+
+          & > .popover {
+            background-color: transparent;
+            left: initial !important;
+            margin-left: 0;
+            max-width: 100%;
+            position: relative;
+            right: 0;
+
+            & > .popover-body {
+              max-width: 100%;
+
+              & > .filterPopup {
+                border: 1px solid $cardBorder;
+                border-radius: $cardBorderRadius;
+                float: none;
+                max-width: 100%;
+                position: relative;
+                right: initial;
+                top: 0;
+
+                &::before,
+                &::after {
+                  left: initial;
+                  right: 5%;
+                }
+
+                & > app-common-filter > .filter_container {
+                  $headerHeight: 50px;
+                  $breadcrumbsHeight: 48px;
+                  $toolbarMarginTop: 12px;
+                  $toolBarPaddings: 16px;
+                  $toolbarHeight: ($toolBarPaddings + 40px) * 3;
+                  $safeArea: 16px;
+                  $maxHeight: $headerHeight + $breadcrumbsHeight +
+                    $toolbarMarginTop + $toolbarHeight + $safeArea;
+
+                  display: flex;
+                  flex-direction: column;
+                  margin-top: 0;
+                  max-width: 100%;
+                  max-height: calc(100vh - #{$maxHeight});
+                  overflow: hidden !important;
+                  overflow-y: auto !important;
+                  padding: 12px;
+
+                  @media screen and (min-width: $mobileL) {
+                    $toolbarHeight: ($toolBarPaddings + 40px) * 2;
+                    $maxHeight: $headerHeight + $breadcrumbsHeight +
+                      $toolbarMarginTop + $toolbarHeight + $safeArea;
+
+                    max-height: calc(100vh - #{$maxHeight});
+                  }
+
+                  @media screen and (min-width: $desktop) {
+                    $toolbarHeight: 40px;
+                    $maxHeight: $headerHeight + $breadcrumbsHeight +
+                      $toolbarMarginTop + $toolbarHeight + $safeArea;
+
+                    max-height: calc(100vh - #{$maxHeight});
+                  }
+
+                  & > filter_body {
+                    flex: 1;
+                  }
+
+                  & > .filter_button_section {
+                    display: flex;
+                    float: none;
+                    gap: 12px;
+                    justify-content: flex-end;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    padding-top: 12px;
+
+                    & > * {
+                      margin: 0 !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      & > .sort-wrapper {
+        align-items: center;
+        display: flex;
+        float: none;
+        line-height: 1.3;
+        padding: 8px 12px;
+        padding-right: 20px;
+        text-wrap: nowrap;
+      }
+
+      & > .legendWrapper {
+        float: none;
+        margin-top: 0;
+
+        & > .newLegend {
+          align-items: center;
+          display: flex;
+          float: none;
+          margin-left: 0;
+
+          & > * {
+            float: none;
+            text-wrap: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

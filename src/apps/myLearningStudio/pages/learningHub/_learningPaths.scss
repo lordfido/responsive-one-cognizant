@@ -1,0 +1,59 @@
+all-pathways {
+  & > .pathways_Wrapper {
+    float: none;
+    padding: 0;
+    width: 100%;
+
+    @import './components/toolbar';
+
+    & > .result {
+      float: none;
+
+      & > .allPathwayContainer,
+      & > .pathwayThemeContainer {
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+        width: auto;
+
+        & > pathway-wrapper {
+          display: inline-block;
+        }
+
+        & > app-pagination > .clearboth {
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+
+          & > .total-pages {
+            float: none;
+            padding-top: 0;
+          }
+
+          & > .pages-warapper {
+            float: none;
+            padding-right: 0;
+
+            & > .pagination {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .pathwayWrapper,
+    .pathwaythemewrapper {
+      @include card;
+      float: none;
+    }
+
+    .pathwayWrapper {
+      @import './components/pathCard';
+    }
+
+    .pathwaythemewrapper {
+      @import './components/themeCard';
+    }
+  }
+}
