@@ -1,4 +1,8 @@
-type AppName = 'associate360' | 'goPerform' | 'myLearningStudio';
+type AppName =
+  | 'associate360'
+  | 'goPerform'
+  | 'liveSupport'
+  | 'myLearningStudio';
 
 export type FrameName = AppName | 'rootLink';
 

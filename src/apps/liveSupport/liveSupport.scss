@@ -1,0 +1,357 @@
+@import '../../constants/constants';
+@import '../../constants/mixins';
+
+$mobileMax: 520px;
+$mobileL: #{$mobileMax + 1px};
+$tablet: 700px;
+$tabletMax: 767px;
+$tabletM: #{$tabletMax + 1px};
+$tabletL: 991px;
+$desktop: 1024px;
+$desktopL: 1328px;
+
+@mixin flex {
+  display: flex;
+  flex: 1 !important;
+  flex-direction: column;
+}
+
+body {
+  max-height: 100vh;
+  overflow: hidden;
+
+  & > .app-body {
+    @include flex;
+    max-width: 100%;
+    padding: 0 !important;
+    width: 100%;
+
+    @media screen and (min-width: $desktopL) {
+      max-width: $pageMaxWidth;
+    }
+
+    & > .main {
+      @include flex;
+
+      & > #ui-view {
+        @include flex;
+
+        & > .chatbox-wrapper {
+          @include flex;
+          padding: 0 12px !important;
+
+          @media screen and (min-width: $desktopL) {
+            padding: 0 !important;
+          }
+
+          & > .rsiBlock {
+            margin: 12px 0;
+
+            &,
+            & > .rsiBlock {
+              padding: 0;
+              position: relative;
+            }
+          }
+
+          & > .chat-first-header {
+            margin-top: 0 !important;
+            position: relative;
+          }
+
+          & > .chat-heading {
+            align-items: center;
+            display: flex !important;
+            height: auto !important;
+            justify-content: space-between;
+            margin: 12px 0 !important;
+            padding: 0;
+
+            & > .agent-details,
+            & > .button-holder {
+              float: none;
+              padding: 0 !important;
+              width: auto;
+            }
+
+            & > .agent-details > .back_Btn {
+              float: none;
+              margin-top: 0;
+            }
+          }
+
+          & > .row {
+            flex: 1;
+            overflow: hidden;
+            overflow-y: auto;
+
+            &:has(.nodisplay) {
+              display: none;
+            }
+
+            & > .titles-wrapper {
+              flex-direction: column;
+              float: none;
+              margin: 0 !important;
+              padding: 0 !important;
+              position: relative !important;
+              top: 0;
+
+              & > .titles-row {
+                flex-direction: column !important;
+                width: 100%;
+
+                @media screen and (min-width: $tablet) {
+                  flex-direction: row !important;
+                }
+
+                & > .tiles-heading {
+                  flex: 1 !important;
+                }
+              }
+            }
+          }
+
+          & > .chatbox-widget {
+            @include flex;
+            justify-content: flex-end;
+            margin: 0;
+
+            & > .chatbox-widget-bar {
+              margin: 12px 0;
+              max-width: 100%;
+              min-width: 100% !important;
+              order: 2;
+
+              & > .input-area-initial {
+                height: auto;
+
+                & > .row > .chatbox-widget-bottom {
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+                  gap: 12px;
+                  margin-top: 0 !important;
+                  top: 0 !important;
+                  position: relative;
+
+                  @media screen and (min-width: $tabletM) {
+                    flex-direction: row;
+                  }
+
+                  & > .suggestQueryBtn,
+                  & > .input-area-wrapper > textarea {
+                    margin-top: 0;
+                  }
+
+                  & > .input-area-wrapper {
+                    align-items: center;
+                    display: flex;
+                    flex: 1;
+                    flex-direction: row;
+                    gap: 12px;
+                    padding-left: 0;
+                    position: relative;
+                    width: auto;
+
+                    & > textarea {
+                      flex: 1;
+                      width: auto;
+                    }
+
+                    & > .convSearch {
+                      background-position: center;
+                      bottom: initial;
+                      margin-left: 0;
+                      margin-top: 0 !important;
+                      padding: 0;
+                      position: relative;
+                      top: initial;
+                      right: initial;
+                    }
+                  }
+
+                  & > .AppnameButton {
+                    bottom: 6px;
+                    top: initial;
+
+                    @media screen and (max-width: $tabletMax) {
+                      left: 0;
+                      margin-left: 6px;
+                    }
+                  }
+
+                  & > .AppNameButtonContainer {
+                    bottom: 0;
+                    left: 0 !important;
+                    padding: 0;
+                    top: initial !important;
+                    z-index: 999;
+
+                    & > .AppNameButtonMobile {
+                      align-items: center;
+                      display: inline-flex;
+
+                      & > img {
+                        margin-bottom: 0;
+                      }
+                    }
+                  }
+
+                  .wrapper-botFaqOl {
+                    @include scrollbars;
+
+                    & {
+                      bottom: 100%;
+                      height: auto;
+                      max-height: 50vh;
+                      margin-left: 0 !important;
+                      overflow: hidden;
+                      overflow-y: auto;
+                      position: absolute;
+                      right: 0;
+                    }
+
+                    & > .acs_bar {
+                      position: relative;
+                      top: 0 !important;
+                      width: 100% !important;
+                    }
+
+                    & > .mCustomScrollbar {
+                      top: initial !important;
+                      margin-bottom: 0;
+
+                      .mCSB_container {
+                        margin-right: 0 !important;
+                      }
+                    }
+                  }
+
+                  & > .wrapper-autoComplete {
+                    bottom: 100%;
+                    margin-left: 0 !important;
+                    position: absolute;
+                    right: 0;
+
+                    & > .autoCompleteWrapper {
+                      bottom: initial;
+                      display: flex;
+                      flex-direction: column;
+                      height: auto;
+
+                      & > .appListAtAutoComplete {
+                        order: 2;
+                        top: 0;
+                      }
+
+                      & > .noRelevantWrapper {
+                        align-items: center;
+                        display: flex;
+                        height: auto;
+                        justify-content: space-between;
+                        order: 3;
+                        padding: 4px 8px !important;
+                        position: relative;
+                        top: 0;
+
+                        & > .noRelevSelectMsg {
+                          flex: 1;
+
+                          & > p {
+                            margin-bottom: 0;
+                          }
+                        }
+
+                        & > .notRelevantText {
+                          position: relative;
+                          top: 0;
+                          right: 0;
+                        }
+                      }
+
+                      & > .acs_bar {
+                        order: 1;
+                        position: relative;
+                        top: 0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .tiles-wrapper-mobile {
+              overflow: hidden;
+              overflow-y: auto;
+              position: relative !important;
+              top: 0 !important;
+            }
+
+            & > .chatbox-widget-container {
+              @include flex;
+              max-width: 100%;
+              min-width: 100% !important;
+              width: 100% !important;
+
+              & > .chatbox-widget-chat-wrap {
+                @include flex;
+                float: none;
+
+                & > .chatbox-widget-body {
+                  @include flex;
+
+                  & > .chatbox-widget-content {
+                    @include flex;
+                    float: none;
+                    height: auto;
+                    max-height: none !important;
+                    min-height: 0 !important;
+                    padding-bottom: 0;
+
+                    & > .chat-snippet-pane {
+                      @include flex;
+                      float: none;
+                      margin-bottom: 0px !important;
+                      max-height: none;
+
+                      & > .chatbox-snippet-panel {
+                        max-height: none !important;
+                        min-height: 0 !important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          & > .row:not(:has(.nodisplay)) + .chatbox-widget {
+            flex: 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+    &.header-fixed {
+      & > .mobile-navigation-bar {
+        position: relative;
+      }
+
+      & > .app-body {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  & > footer.LSA-footer-banner,
+  & > .footer_mobile {
+    bottom: initial !important;
+    height: auto !important;
+    left: initial !important;
+    position: relative !important;
+    right: initial !important;
+    top: initial !important;
+  }
+}

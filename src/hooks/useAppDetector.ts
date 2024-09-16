@@ -1,4 +1,4 @@
-import { DEBUG_RECURSIVE } from '../constants';
+import { DEBUG_RECURSIVE, frames } from '../constants';
 import { FrameName } from '../types';
 import { createDelay, getFrameElement, log } from '../utils';
 import { useNewWindow } from './useNewWindow';

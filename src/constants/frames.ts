@@ -8,14 +8,18 @@ export const frames: FrameConfig[] = [
   },
   {
     name: 'associate360',
-    selector: `iframe[src="${supportedApps['associate360'].url}"]`
+    selector: `iframe[src="${supportedApps.associate360.url}"]`
   },
   {
     name: 'goPerform',
-    selector: `iframe[src="${supportedApps['goPerform'].url}"]`
+    selector: `iframe[src="${supportedApps.goPerform.url}"]`
+  },
+  {
+    name: 'liveSupport',
+    selector: `iframe[src^="${supportedApps.liveSupport.url}"]`
   },
   {
     name: 'myLearningStudio',
-    selector: `iframe[src="${supportedApps['myLearningStudio'].url}"]`
+    selector: `iframe[src="${supportedApps.myLearningStudio.url}"]`
   }
 ];

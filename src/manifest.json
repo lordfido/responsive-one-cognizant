@@ -16,6 +16,14 @@
     },
     {
       "matches": [
+        "https://onecognizantbcazrapps.cognizant.com/2736/*"
+      ],
+      "js": [
+        "/js/associate360.js"
+      ]
+    },
+    {
+      "matches": [
         "https://onecognizantbcazrapps.cognizant.com/2394/*"
       ],
       "js": [
@@ -24,18 +32,18 @@
     },
     {
       "matches": [
-        "https://onecognizantazrapps.cognizant.com/1738/*"
+        "https://onecognizantchat.cognizant.com/2425/*"
       ],
       "js": [
-        "/js/myLearningStudio.js"
+        "/js/liveSupport.js"
       ]
     },
     {
       "matches": [
-        "https://onecognizantbcazrapps.cognizant.com/2736/*"
+        "https://onecognizantazrapps.cognizant.com/1738/*"
       ],
       "js": [
-        "/js/associate360.js"
+        "/js/myLearningStudio.js"
       ]
     }
   ],
@@ -55,7 +63,25 @@
       ],
       "resources": [
         "/images/*",
+        "/css/associate360.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://onecognizantbcazrapps.cognizant.com/*"
+      ],
+      "resources": [
+        "/images/*",
         "/css/goPerform.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://onecognizantchat.cognizant.com/*"
+      ],
+      "resources": [
+        "/images/*",
+        "/css/liveSupport.css"
       ]
     },
     {
@@ -65,15 +91,6 @@
       "resources": [
         "/images/*",
         "/css/myLearningStudio.css"
-      ]
-    },
-    {
-      "matches": [
-        "https://onecognizantbcazrapps.cognizant.com/*"
-      ],
-      "resources": [
-        "/images/*",
-        "/css/associate360.css"
       ]
     }
   ],

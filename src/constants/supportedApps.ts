@@ -16,6 +16,11 @@ export const supportedApps: SupportedApps = {
     name: 'Go Perform',
     url: 'https://onecognizantbcazrapps.cognizant.com/2394'
   },
+  liveSupport: {
+    icon: require('../assets/icons/liveSupport.png'),
+    name: 'Live Support - GSD',
+    url: 'https://onecognizantchat.cognizant.com/2425'
+  },
   myLearningStudio: {
     icon: require('../assets/icons/myLearningStudio.png'),
     name: 'My Learning Studio',
