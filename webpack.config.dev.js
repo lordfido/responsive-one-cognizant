@@ -50,5 +50,8 @@ module.exports = {
   plugins: [getCopyPlugin(distPath)],
   resolve: {
     extensions: ['.tsx', '.ts', '.scss']
+  },
+  stats: {
+    loggingDebug: ['sass-loader']
   }
 };

@@ -14,6 +14,31 @@
   text-overflow: ellipsis;
 }
 
+@mixin button($primary: false) {
+  border-radius: $buttonBorderRadius;
+  transition: background-color 0.2s, border-color 0.2s;
+
+  @if $primary == true {
+    background-color: $buttonPrimaryBg !important;
+    border-color: $buttonPrimaryBorder !important;
+    color: $buttonPrimaryColor !important;
+
+    &:hover {
+      background-color: $buttonPrimaryBgHover !important;
+      border-color: $buttonPrimaryBorderHover !important;
+    }
+  } @else {
+    background-color: $buttonBg !important;
+    border-color: $buttonBorder !important;
+    color: $buttonColor !important;
+
+    &:hover {
+      background-color: $buttonBgHover !important;
+      border-color: $buttonBorderHover !important;
+    }
+  }
+}
+
 @mixin scrollbars {
   .mCustomScrollbar {
     height: auto !important;
@@ -28,10 +53,12 @@
 
     & > .mCustomScrollBox > .mCSB_container,
     & > .mCSB_container {
-      top: 0 !important;
+      margin-right: 0 !important;
       overflow-y: auto;
+      top: 0 !important;
     }
 
+    & > .mCustomScrollBox > .mCSB_scrollTools,
     & > .mCSB_scrollTools {
       display: none !important;
     }

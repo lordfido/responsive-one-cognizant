@@ -31,11 +31,27 @@ $zIndexes: (
   'tutorial': 6
 );
 
+$buttonBg: $cognizantBlue;
+$buttonBgHover: $accentBlue;
+$buttonBorder: $cognizantBlue;
+$buttonBorderHover: $accentBlue;
+$buttonColor: $white;
+$buttonBorderRadius: 100px;
+
+$buttonPrimaryBg: $teal;
+$buttonPrimaryBgHover: $midBlue;
+$buttonPrimaryBorder: $teal;
+$buttonPrimaryBorderHover: $midBlue;
+$buttonPrimaryColor: $white;
+
 $cardBg: $white;
 $cardBorder: $lightGrey;
 $cardBorderRadius: $borderRadius;
 $cardHeadingBg: $lightGrey;
 $cardShadow: 0px 0px 3px $grey;
+
+$footerBg: $cognizantBlue;
+$footerColor: $white;
 
 $inputBackground: $falseWhite;
 $inputBorderRadius: $borderRadius;
@@ -56,7 +72,11 @@ $modalWidth: 100%;
 $modalHeaderBg: $cognizantBlue;
 $modalHeaderHeight: 60px;
 
+$navbarBg: $cognizantBlue;
+
 $tableHeadingBorderColor: $cognizantBlue;
 $tableHeadingBorderColorWarning: var(--yellow);
 $tableHeadingBorderColorSuccess: var(--green);
 $tableContentBorderColor: $grey;
+$tableRowBg: $lightGrey;
+$tableRowEvenBg: $lightBlue;

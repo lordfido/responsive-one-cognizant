@@ -21,6 +21,15 @@ const init = () => {
         removeHardcodedHeights();
         removeHardcodedWidths();
       });
+
+      log('Setting the timeout');
+      setTimeout(() => {
+        const list = document.querySelector(
+          '.wrapper-autoComplete > .autoCompleteWrapper'
+        );
+
+        log(list?.innerHTML);
+      }, 10000);
     }
   });
 };
