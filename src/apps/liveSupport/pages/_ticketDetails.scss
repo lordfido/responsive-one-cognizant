@@ -1,0 +1,200 @@
+& > .Gsd_status_container {
+}
+
+& > .Gsd_show_more_container {
+  // This selector doesn't work
+  &:has(~ #gsd_status_deatils:visible) {
+    display: none;
+  }
+}
+
+& > .noticket_container {
+  // & > .noticket > p:nth-child(2) {
+  //   display: none;
+  // }
+}
+
+& > #gsd_status_deatils {
+  overflow-x: hidden;
+  padding: 12px;
+  position: absolute;
+
+  & > .gsd_status_wrap {
+    margin-top: 0;
+
+    .details_back {
+      padding: 0 !important;
+      margin-bottom: 12px;
+      margin-left: 0;
+
+      & > .row {
+        background-color: transparent;
+        color: $darkBlue;
+        margin-bottom: 0;
+        padding: 12px;
+
+        & > div {
+          align-items: center;
+          color: inherit;
+          display: inline-flex;
+          justify-content: flex-start;
+          padding-left: 0;
+          width: auto;
+
+          &:nth-child(1) > img {
+            @include button();
+          }
+
+          &:nth-child(2) {
+            flex: 1;
+
+            & > * {
+              color: inherit;
+            }
+          }
+        }
+
+        & > .text-right {
+          display: none !important;
+        }
+      }
+    }
+
+    .postComments {
+      @include card;
+
+      & > #comment_form > .row {
+        width: 100%;
+
+        &:last-of-type {
+          align-items: center;
+          gap: 12px;
+          justify-content: space-between;
+          padding: 12px 0;
+
+          @media screen and (min-width: $mobileXl) {
+            align-items: flex-start;
+            gap: 0;
+          }
+
+          & > div {
+            padding: 0;
+
+            & > .row {
+              gap: 12px;
+              justify-content: flex-end;
+            }
+          }
+
+          .attach_button,
+          button {
+            float: none !important;
+            margin: 0 !important;
+            padding: 4px 20px !important;
+            width: 100%;
+
+            @media screen and (min-width: $mobileXl) {
+              width: auto;
+            }
+          }
+
+          .attach_button,
+          button:not(:disabled) {
+            @include button;
+          }
+
+          button.dark-blue {
+            @include button(true);
+          }
+        }
+      }
+    }
+
+    .details_box_wrapper {
+      @include card;
+
+      height: auto !important;
+
+      & > .details_box {
+        border: none;
+        float: none;
+        margin-bottom: 0;
+        padding: 12px;
+
+        & > .details_box_head,
+        & > .details_box_content {
+          float: none;
+          margin: 0;
+          width: 100%;
+        }
+
+        & > .details_box_head {
+          align-items: center;
+          display: flex;
+          gap: 12px;
+          margin-bottom: 12px;
+          padding: 0;
+
+          & > .avatar_box {
+            display: block;
+            position: relative;
+            top: 0;
+          }
+        }
+
+        & > .details_box_content {
+          background-color: transparent;
+          border: none;
+          padding: 0;
+        }
+      }
+    }
+
+    .ticket_info_heading_mobile {
+    }
+
+    #ticketInfoBox {
+      flex: 1;
+
+      & > .ticket_info {
+        float: none;
+        margin-top: 0;
+
+        // When ticket is closed, .postComments is not displayed,
+        // so no margin is needed.
+        // Due to this uncertainty, I preffer to never use a negative
+        // top margin, and leave a blank space
+
+        // @media screen and (min-width: $tabletM) {
+        //   margin-top: -240px;
+        // }
+
+        // @media screen and (min-width: $tabletL) {
+        //   margin-top: -200px;
+        // }
+
+        & > .ticket_information_heading {
+          position: relative;
+          margin-bottom: 10px;
+        }
+
+        & > .resolutionNote {
+          border-radius: $cardBorderRadius;
+          padding: 12px;
+
+          br {
+            margin-bottom: 12px;
+          }
+        }
+
+        & > .info_container {
+          @include card;
+        }
+      }
+    }
+  }
+}
+
+& > #removeModal {
+  @include modal;
+}

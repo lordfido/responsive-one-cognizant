@@ -16,6 +16,7 @@
 
 @mixin button($primary: false) {
   border-radius: $buttonBorderRadius;
+  text-align: center;
   transition: background-color 0.2s, border-color 0.2s;
 
   @if $primary == true {
