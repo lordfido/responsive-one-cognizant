@@ -1,6 +1,3 @@
-& > .Gsd_status_container {
-}
-
 & > .Gsd_show_more_container {
   // This selector doesn't work
   &:has(~ #gsd_status_deatils:visible) {

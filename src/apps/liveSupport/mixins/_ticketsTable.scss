@@ -1,0 +1,45 @@
+@mixin tickets-table {
+  border-color: $tableContentBorderColor;
+  border-spacing: 0;
+  margin-top: 0;
+
+  & > thead {
+    background-color: $tableHeadingBg;
+    border-color: $tableHeadingBorderColor;
+    text-align: center;
+    vertical-align: middle;
+
+    & > tr > th {
+      border-color: inherit;
+      border-style: solid;
+      border-width: 1px;
+      border-right-color: $tableContentBorderColor;
+      padding: 8px;
+
+      &:last-of-type {
+        border-right-color: inherit;
+      }
+    }
+  }
+
+  & > tbody {
+    border-color: inherit;
+    text-align: center;
+
+    & > tr {
+      border-color: inherit;
+
+      &:hover {
+        background-color: $tableRowBg;
+      }
+
+      & > td {
+        border-color: inherit;
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-top: 0px;
+        padding: 8px;
+      }
+    }
+  }
+}

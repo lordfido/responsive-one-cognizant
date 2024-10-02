@@ -50,6 +50,7 @@ body {
         position: relative;
 
         @import './pages/needHelp';
+        @import './pages/ticketList';
         @import './pages/ticketDetails';
       }
     }

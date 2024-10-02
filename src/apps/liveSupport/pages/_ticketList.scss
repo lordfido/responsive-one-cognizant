@@ -1,0 +1,32 @@
+@import '../mixins/ticketsTable';
+
+& > .chat_history_list,
+& > .Gsd_status_container {
+  margin-top: 12px;
+  padding: 0 12px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 24px;
+    padding: 24px;
+  }
+
+  @media screen and (min-width: $desktopXl) {
+    padding: 0px;
+  }
+}
+
+& > .chat_history_list {
+  &
+    > .bootstrap-table
+    > .fixed-table-container
+    > .fixed-table-body
+    table.table {
+    @include tickets-table;
+  }
+}
+
+& > .Gsd_status_container {
+  & > table#Gsd_status_list {
+    @include tickets-table;
+  }
+}
