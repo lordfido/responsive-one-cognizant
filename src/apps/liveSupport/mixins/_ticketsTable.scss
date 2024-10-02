@@ -39,6 +39,15 @@
         border-right-width: 1px;
         border-top: 0px;
         padding: 8px;
+
+        &.resolved > .yes,
+        .Closed {
+          color: $success;
+        }
+
+        &.resolved > .no {
+          color: $danger;
+        }
       }
     }
   }

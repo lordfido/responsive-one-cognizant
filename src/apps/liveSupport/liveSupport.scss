@@ -43,6 +43,7 @@ body {
 
     & > .main {
       @include flex;
+      margin-bottom: 0;
 
       & > #ui-view {
         @include flex;
@@ -51,6 +52,7 @@ body {
 
         @import './pages/needHelp';
         @import './pages/ticketList';
+        @import './pages/chatHistoryDetails';
         @import './pages/ticketDetails';
       }
     }

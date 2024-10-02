@@ -16,6 +16,10 @@ $darkBlue: #000048;
 
 $teal: #248d95;
 
+$danger: #b81f2d;
+$warning: #e9c71d;
+$success: #2db81f;
+
 $backdropOpacity: 0.7;
 
 $borderRadius: 6px;
@@ -76,8 +80,8 @@ $navbarBg: $cognizantBlue;
 
 $tableHeadingBg: $cognizantBlue;
 $tableHeadingBorderColor: $cognizantBlue;
-$tableHeadingBorderColorWarning: var(--yellow);
-$tableHeadingBorderColorSuccess: var(--green);
+$tableHeadingBorderColorWarning: $danger;
+$tableHeadingBorderColorSuccess: $success;
 $tableContentBorderColor: $grey;
 $tableRowBg: $lightGrey;
 $tableRowEvenBg: $lightBlue;

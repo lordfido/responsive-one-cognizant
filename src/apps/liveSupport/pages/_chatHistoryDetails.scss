@@ -1,0 +1,91 @@
+@import '../../../constants/mixins';
+@import '../mixins/chatbox';
+
+& > .chat_history_deatils {
+  display: flex;
+  flex-direction: column;
+  margin: 12px auto;
+  top: 0;
+  padding: 0 12px;
+
+  @media screen and (min-width: $tablet) {
+    margin: 24px auto;
+    padding: 0 24px;
+  }
+
+  & > .chd_details_back {
+    margin-bottom: 12px;
+    width: 100%;
+
+    & > .row {
+      align-items: center;
+      display: flex;
+      flex-wrap: initial !important;
+      margin-top: 0;
+      padding-bottom: 0 !important;
+      width: 100%;
+
+      & > .back_arrow {
+        @include button();
+
+        & {
+          float: none;
+          margin-top: 0;
+          padding-left: 0;
+          padding-right: 0;
+          margin-right: 12px;
+        }
+      }
+
+      & > div {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        margin-top: 0;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: auto;
+
+        & > img {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+
+  & > .chatbox-widget-container {
+    @include chatbox;
+
+    & {
+      width: 100%;
+    }
+
+    & > .chatbox-widget-chat-wrap {
+      float: none;
+
+      & > .chatbox-widget-body {
+        & > .chatbox-widget-content {
+          float: none;
+          height: auto;
+          max-height: none;
+          min-height: 0;
+          padding: 0;
+
+          & > .chat-snippet-pane {
+            @include scrollbars;
+
+            & {
+              float: none;
+              height: auto;
+              max-height: none;
+            }
+
+            & > .chatbox-snippet-panel {
+              min-height: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

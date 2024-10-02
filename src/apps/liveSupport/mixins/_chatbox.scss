@@ -1,0 +1,50 @@
+@mixin chatbox {
+  @include flex;
+  max-width: 100%;
+  min-width: 100% !important;
+  width: 100% !important;
+
+  & > .chatbox-widget-chat-wrap {
+    @include flex;
+    float: none;
+
+    & > .chatbox-widget-body {
+      @include flex;
+
+      & > .chatbox-widget-content {
+        @include flex;
+        float: none;
+        height: auto;
+        max-height: none !important;
+        min-height: 0 !important;
+        padding-bottom: 0;
+
+        & > .chat-snippet-pane {
+          @include flex;
+          float: none;
+          margin-bottom: 0px !important;
+          max-height: none;
+
+          & > .chatbox-snippet-panel {
+            max-height: none !important;
+            min-height: 0 !important;
+
+            .chatbox-snippet-block {
+              & > .chatbox-snippet-text > .chat-text-block {
+                word-break: break-word;
+              }
+
+              &.user > .chatbox-snippet-text > .chat-text-block {
+                background-color: $midBlue;
+
+                &::after {
+                  border-left-color: $midBlue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
