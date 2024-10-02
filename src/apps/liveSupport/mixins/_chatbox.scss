@@ -1,8 +1,12 @@
 @mixin chatbox {
   @include flex;
-  max-width: 100%;
-  min-width: 100% !important;
-  width: 100% !important;
+
+  & {
+    display: flex !important;
+    max-width: 100%;
+    min-width: 100% !important;
+    width: 100% !important;
+  }
 
   & > .chatbox-widget-chat-wrap {
     @include flex;
@@ -13,17 +17,48 @@
 
       & > .chatbox-widget-content {
         @include flex;
-        float: none;
-        height: auto;
-        max-height: none !important;
-        min-height: 0 !important;
-        padding-bottom: 0;
+
+        & {
+          float: none;
+          height: auto;
+          max-height: none !important;
+          min-height: 0 !important;
+          padding-bottom: 0;
+        }
 
         & > .chat-snippet-pane {
           @include flex;
-          float: none;
-          margin-bottom: 0px !important;
-          max-height: none;
+
+          & {
+            float: none;
+            margin-bottom: 0px !important;
+            max-height: none;
+          }
+
+          & > .business-unavail,
+          & > .network-avail,
+          & > .network-unavail {
+            align-items: center;
+            display: flex;
+            margin-bottom: 0;
+            padding: 8px 12px;
+            position: relative;
+            font-size: 14px;
+          }
+
+          & > .business-unavail {
+            background-color: $warning;
+          }
+
+          & > .network-avail {
+            background-color: $success;
+            color: $white;
+            filter: brightness(0) invert(1);
+          }
+
+          & > .network-unavail {
+            background-color: $danger;
+          }
 
           & > .chatbox-snippet-panel {
             max-height: none !important;
