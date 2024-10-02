@@ -1,6 +1,6 @@
 {
   "name": "Responsive OneCognizant",
-  "version": "1.0.0",
+  "version": "1.0",
   "description": "Makes OneCognizant responsive",
   "icons": {
     "128": "./images/cognizant_logo.png"
