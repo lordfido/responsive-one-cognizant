@@ -1,7 +1,9 @@
+@import '../mixins/ticketsList';
 @import '../mixins/ticketsTable';
 
 & > .chat_history_list,
 & > .Gsd_status_container {
+  flex: 1;
   margin: 12px auto;
   padding: 0 12px !important;
 
@@ -11,7 +13,7 @@
   }
 
   @media screen and (min-width: $desktopXl) {
-    padding: 0px;
+    padding: 0px !important;
   }
 }
 
@@ -23,10 +25,22 @@
     table.table {
     @include tickets-table;
   }
+
+  & > #chat_history_list_mobile {
+    @include tickets-list;
+  }
+
+  & > .lazy_loader_chat_history {
+    display: none !important;
+  }
 }
 
 & > .Gsd_status_container {
   & > table#Gsd_status_list {
     @include tickets-table;
+  }
+
+  & > #gsd_dynamic_list_mobile {
+    @include tickets-list;
   }
 }

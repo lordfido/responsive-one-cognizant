@@ -1,0 +1,32 @@
+@import '../../../constants/mixins';
+
+@mixin tickets-list {
+  & > div {
+    @include card;
+
+    & {
+      margin-bottom: 12px;
+      margin-top: 0;
+      padding: 12px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    & > div {
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+
+      .resolved > .yes,
+      .Closed {
+        color: $success;
+      }
+
+      .resolved > .no {
+        color: $danger;
+      }
+    }
+  }
+}

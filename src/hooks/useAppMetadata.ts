@@ -33,7 +33,16 @@ export const useAppMetadata = (frameName: FrameName) => {
     favicon.type = 'image/x-icon';
     favicon.setAttribute('sizes', '16x16');
 
+    // Remove previous viewport
+    document.querySelector('meta[name="viewport"]')?.remove();
+
+    // Set viewport
+    const viewport = document.createElement('meta');
+    viewport.name = 'viewport';
+    viewport.content = 'width=device-width, initial-scale=1, user-scalable=no';
+
     document.head.append(shortcut);
     document.head.append(favicon);
+    document.head.append(viewport);
   }
 };

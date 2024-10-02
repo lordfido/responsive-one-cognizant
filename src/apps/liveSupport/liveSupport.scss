@@ -27,7 +27,21 @@ body {
 
   & > .navbar {
     background-color: $navbarBg !important;
+    padding: 0;
     z-index: map-get($zIndexes, 'header');
+
+    & > .container-fluid {
+      max-width: $pageMaxWidth;
+      padding: 0 12px !important;
+
+      @media screen and (min-width: $tablet) {
+        padding: 0 24px !important;
+      }
+
+      @media screen and (min-width: $desktopXl) {
+        padding: 0 !important;
+      }
+    }
   }
 
   & > .app-body {
@@ -48,7 +62,11 @@ body {
       & > #ui-view {
         @include flex;
 
-        position: relative;
+        & {
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
 
         @import './pages/needHelp';
         @import './pages/ticketList';
