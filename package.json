@@ -1,16 +1,23 @@
 {
   "name": "responsive-one-cognizant",
+  "displayName": "Responsive OneCognizant",
+  "description": "Makes OneCognizant responsive",
   "version": "1.0.0",
   "repository": "git@github.com:lordfido/responsive-one-cognizant.git",
   "author": "Rafael Pérez García <real.lord.fido@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "upgradeVersion": "node ./scripts/updatePackageJson.js",
+    "upgradeManifest": "node ./scripts/updateManifest.js",
+    "createZip": "node ./scripts/createZip.js",
     "clear:build": "rimraf ./build",
     "clear:dist": "rimraf ./dist",
     "clear": "npm run clear:build && npm run clear:dist",
     "copy-manifest": "cpy --flat ./src/manifest.json ./dist",
     "prebuild": "npm run clear && npm run copy-manifest",
     "build": "webpack --config ./webpack.config.prod.js",
+    "build:prod": "yarn upgradeManifest && yarn build && yarn createZip",
+    "build:new": "yarn upgradeVersion && yarn build:prod",
     "predev": "npm run clear && npm run copy-manifest",
     "dev": "webpack --config ./webpack.config.dev.js --watch"
   },
@@ -29,5 +36,8 @@
     "typescript": "^5.3.3",
     "webpack": "^5.90.1",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1"
   }
 }
