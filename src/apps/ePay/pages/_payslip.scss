@@ -1,0 +1,15 @@
+& > #EPayslip_MainTableDiv {
+  & > .innerTable_payslip {
+    height: auto !important;
+    margin-top: 0 !important;
+    width: auto !important;
+
+    input[type='submit'] {
+      @include button(true);
+
+      & {
+        cursor: pointer;
+      }
+    }
+  }
+}

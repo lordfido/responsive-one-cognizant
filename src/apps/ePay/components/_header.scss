@@ -1,0 +1,101 @@
+// Header
+&:nth-of-type(1) {
+  & > tbody > tr {
+    // Heading
+    &:nth-of-type(1) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin: 12px 0 !important;
+
+      & > td {
+        display: flex;
+
+        // Logo
+        &:nth-of-type(1) {
+          padding: 0 12px;
+
+          & > a {
+            & > .logo {
+              margin: 0 !important;
+            }
+          }
+        }
+
+        // Spacer
+        &:nth-of-type(2) {
+          display: none !important;
+        }
+
+        // Right menu
+        &:nth-of-type(3) {
+          height: auto !important;
+          margin-left: auto;
+          padding: 0 12px;
+
+          & > table {
+            height: auto !important;
+            width: auto !important;
+
+            & > tbody > tr {
+              align-items: center;
+              justify-content: flex-end;
+
+              &,
+              & > td {
+                display: flex;
+                height: auto !important;
+                margin: 0 !important;
+                width: auto !important;
+              }
+
+              // User info
+              &:nth-of-type(1) {
+                margin-bottom: 12px !important;
+
+                & > td {
+                  padding: 0;
+                  padding-left: 12px;
+
+                  // Welcome msg
+                  &:nth-of-type(1) {
+                  }
+
+                  // Spacer
+                  &:nth-of-type(2) {
+                  }
+
+                  // Logout link
+                  &:nth-of-type(3) {
+                    & > a {
+                      margin: 0 !important;
+                    }
+                  }
+                }
+              }
+
+              // Country selector
+              &:nth-of-type(2) > td {
+                padding: 0;
+
+                & > .country_dropdown_panel {
+                  margin: 0 !important;
+
+                  & > .ddl {
+                    margin: 0;
+                    margin-left: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Navbar
+    &:nth-of-type(2) {
+      background-color: $tableHeadingBg;
+    }
+  }
+}

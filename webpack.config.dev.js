@@ -10,6 +10,7 @@ module.exports = {
     popup: path.resolve(appsPath, 'popup/index.ts'),
     oneCognizant: path.resolve(appsPath, 'oneCognizant/index.ts'),
     associate360: path.resolve(appsPath, 'associate360/index.ts'),
+    ePay: path.resolve(appsPath, 'ePay/index.ts'),
     goPerform: path.resolve(appsPath, 'goPerform/index.ts'),
     liveSupport: path.resolve(appsPath, 'liveSupport/index.ts'),
     myLearningStudio: path.resolve(appsPath, 'myLearningStudio/index.ts')

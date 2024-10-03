@@ -45,6 +45,14 @@
       "js": [
         "/js/myLearningStudio.js"
       ]
+    },
+    {
+      "matches": [
+        "https://epay.cognizant.com/*"
+      ],
+      "js": [
+        "/js/ePay.js"
+      ]
     }
   ],
   "web_accessible_resources": [
@@ -91,6 +99,15 @@
       "resources": [
         "/images/*",
         "/css/myLearningStudio.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://epay.cognizant.com/*"
+      ],
+      "resources": [
+        "/images/*",
+        "/css/ePay.css"
       ]
     }
   ],

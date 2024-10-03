@@ -1,0 +1,86 @@
+& > table#TblHome {
+  height: auto !important;
+  margin: 0 auto;
+  max-width: $pageMaxWidth;
+  padding: 0 12px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 0 24px;
+  }
+
+  @media screen and (min-width: $desktopXl) {
+    padding: 0;
+  }
+
+  &,
+  & > tbody,
+  & > tbody > tr,
+  & > tbody > tr > td {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  & > tbody > tr > td {
+    padding: 0 !important;
+
+    & > table {
+      height: auto !important;
+      width: auto !important;
+
+      &,
+      & > tbody,
+      & > tbody > tr,
+      & > tbody > tr > td {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      & > tbody > tr > td > table {
+        height: auto !important;
+        margin: 0;
+        width: auto !important;
+
+        &,
+        & > tbody,
+        & > tbody > tr,
+        & > tbody > tr > td {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        & > tbody > tr {
+          height: auto !important;
+
+          & > td {
+            & > br {
+              display: none;
+            }
+
+            & > div {
+              margin-left: 0 !important;
+              margin-top: 0 !important;
+
+              & > p {
+                text-align: center;
+
+                & > input {
+                  @include button(true);
+
+                  & {
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

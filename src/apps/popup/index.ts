@@ -1,7 +1,7 @@
 import { supportedApps } from '../../constants';
+import { log } from '../../utils';
 import { RenderListProps } from './types';
 import './popup.scss';
-import { log } from '../../utils';
 
 const renderListItem = (
   { icon, id, name, url }: RenderListProps,

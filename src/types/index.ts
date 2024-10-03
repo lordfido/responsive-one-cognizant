@@ -1,5 +1,6 @@
 type AppName =
   | 'associate360'
+  | 'ePay'
   | 'goPerform'
   | 'liveSupport'
   | 'myLearningStudio';

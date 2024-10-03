@@ -11,6 +11,11 @@ export const supportedApps: SupportedApps = {
     name: 'Associate 360',
     url: 'https://onecognizantbcazrapps.cognizant.com/2736'
   },
+  ePay: {
+    icon: require('../assets/icons/ePay.png'),
+    name: 'E-Pay',
+    url: 'https://epay.cognizant.com'
+  },
   goPerform: {
     icon: require('../assets/icons/goPerform.png'),
     name: 'Go Perform',

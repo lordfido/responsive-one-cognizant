@@ -1,0 +1,30 @@
+// Footer
+&:nth-of-type(4)#Table1 {
+  background-color: $cognizantBlueDark;
+  border: none !important;
+  bottom: initial !important;
+  position: relative !important;
+
+  & > tbody > tr {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+    padding: 0 12px;
+
+    & > td {
+      background-color: initial !important;
+      height: auto;
+
+      // Logo
+      &.footer > .logo_bottom {
+        background-color: initial !important;
+        margin-left: 0;
+      }
+
+      &.footer_contactus {
+        margin-left: auto;
+      }
+    }
+  }
+}

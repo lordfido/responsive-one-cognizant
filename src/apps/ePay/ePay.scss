@@ -1,0 +1,71 @@
+@import '../../constants/constants';
+@import '../../constants/mixins';
+
+// $maxHeight: 45vh;
+
+// $mobileMax: 520px;
+// $mobileL: #{$mobileMax + 1px};
+// $mobileXl: 576px;
+$tablet: 700px;
+// $tabletMax: 767px;
+// $tabletM: #{$tabletMax + 1px};
+// $tabletL: 991px;
+// $desktop: 1024px;
+// $desktopL: 1280px;
+$desktopXl: 1328px;
+
+html {
+  &,
+  & > body,
+  & > body > form {
+    height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+  }
+
+  & > body {
+    margin: 0 !important;
+
+    & > form {
+      display: flex;
+      flex-direction: column;
+
+      & > table {
+        border-collapse: collapse;
+        height: auto !important;
+        width: 100%;
+
+        @import './components/header';
+        @import './components/footer';
+
+        // Content
+        &:nth-of-type(2) {
+          &,
+          & > tbody,
+          & > tbody > tr,
+          & > tbody > tr > td,
+          & > tbody > tr > td > div {
+            display: flex;
+            flex: 1;
+          }
+
+          & > tbody > tr > td > div {
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            overflow-y: auto;
+            width: 100%;
+
+            @import './pages/homescreen';
+            @import './pages/payslip';
+          }
+        }
+
+        // Spacer
+        &:nth-of-type(3) {
+          display: none;
+        }
+      }
+    }
+  }
+}
