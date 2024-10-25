@@ -3,6 +3,7 @@
   box-shadow: none;
   display: flex;
   flex-direction: row;
+  margin-bottom: 12px;
   z-index: map-get($zIndexes, 'header');
 
   & > div {

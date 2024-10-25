@@ -17,6 +17,7 @@ html > body {
 
       @import './components/header';
       @import './components/associateProfile';
+      @import './components/certify';
 
       & > .cardsParent {
         height: auto !important;

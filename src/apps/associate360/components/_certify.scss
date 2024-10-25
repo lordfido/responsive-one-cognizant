@@ -1,0 +1,62 @@
+& > .certifyDetails {
+  float: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: map-get($zIndexes, 'content');
+
+  & > div {
+    @include modal-content;
+
+    & > .modal-header {
+      @include modal-header;
+    }
+
+    & > .modal-body {
+      @include modal-body;
+      @include scrollbars;
+
+      & {
+        max-height: none !important;
+      }
+
+      & > .contentDefaultTabs {
+        margin: 0 !important;
+
+        & > .mCustomScrollBox > .mCSB_container > .modal-footer {
+          float: left;
+          padding: 0;
+
+          & > .certifyBtnWrapper {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: 0 !important;
+            margin-bottom: 8px !important;
+            width: 100%;
+
+            & > .acknowledgementWrapper {
+              flex: 1;
+            }
+
+            & > .saveBtn {
+              @include button(true);
+
+              & {
+                float: none !important;
+                margin-right: 0 !important;
+              }
+            }
+
+            & + span {
+              float: none;
+              margin: 0 !important;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
