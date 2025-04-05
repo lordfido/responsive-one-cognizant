@@ -48,6 +48,14 @@
     },
     {
       "matches": [
+        "https://compass.talent.cognizant.com/*"
+      ],
+      "js": [
+        "/js/timesheet.js"
+      ]
+    },
+    {
+      "matches": [
         "https://epay.cognizant.com/*"
       ],
       "js": [
@@ -99,6 +107,15 @@
       "resources": [
         "/images/*",
         "/css/myLearningStudio.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://compass.talent.cognizant.com/*"
+      ],
+      "resources": [
+        "/images/*",
+        "/css/timesheet.css"
       ]
     },
     {
