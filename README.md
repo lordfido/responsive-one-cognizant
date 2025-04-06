@@ -2,6 +2,7 @@
 Chrome extension to improve OneCognizant's Responsiveness
 
 - [Demo](#demo)
+- [Install from Chrome Web Store](https://chromewebstore.google.com/detail/responsive-onecognizant/joiofjipfielodaefocjmmmnkakjmhom)
 - [How to install from your computer](#how-to-install-from-your-computer)
 
 ## Demo

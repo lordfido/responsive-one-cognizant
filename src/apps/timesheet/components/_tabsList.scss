@@ -1,0 +1,58 @@
+#win0divPROFILE_TABS > div {
+  &,
+  & > #win0divTIMESHEET,
+  & > #win0divTIMESHEET > table,
+  & > #win0divTIMESHEET > table #PSTABNBO,
+  & > #win0divTIMESHEET > table #PSTABNBO > table {
+    width: 100% !important;
+  }
+
+  & > #win0divTIMESHEET > table > tbody > tr {
+    display: none;
+
+    &:first-of-type {
+      display: table-row;
+    }
+
+    & #PSTABNBO > table {
+      height: auto !important;
+
+      & > tbody > tr {
+        display: flex;
+        flex-direction: row;
+
+        & > td {
+          display: block;
+
+          & > a {
+            background-color: $tabBg;
+            border: none;
+            border-top: $tabBorder;
+            box-sizing: border-box;
+            color: $tabColor;
+            font-size: 14px;
+            font-weight: bold;
+            min-height: $tabHeight;
+            padding: $tabPadding;
+            width: auto;
+
+            & > span {
+              background: none !important;
+              border: none;
+              color: inherit;
+              font-size: inherit;
+              font-weight: inherit;
+              padding: 0;
+            }
+          }
+
+          &#selected > a {
+            background-color: $tabActiveBg;
+            border-top: $tabActiveBorder;
+            color: $tabActiveColor;
+          }
+        }
+      }
+    }
+  }
+}

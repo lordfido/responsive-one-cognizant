@@ -1,0 +1,61 @@
+#win0divTL_INSTALL_VW3_\$0 > table {
+  width: 100% !important;
+
+  // Reported time Summary
+  & > tbody > tr {
+    &:first-of-type > .PSLEVEL1GRIDLABEL {
+      background-color: $tableHeadingBg;
+      border: 1px solid $tableHeadingBorderColor;
+      color: $white;
+      font-size: 14px;
+      padding: 8px 12px;
+      width: auto !important;
+
+      & > #win0divTL_INSTALL_VW3_GP\$0 {
+        color: inherit;
+
+        & > table.PSLEVEL1GRIDLABEL {
+          background-color: transparent;
+          color: inherit;
+          width: 100% !important;
+
+          & > tbody > tr {
+            display: flex;
+
+            & > td {
+              background-color: transparent;
+              border: 0;
+              color: inherit;
+              font-size: inherit;
+              padding: 0;
+              vertical-align: middle;
+
+              & > a,
+              & > span {
+                color: inherit !important;
+                font-size: inherit;
+                position: relative;
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & > td > #divgcTL_INSTALL_VW3_\$0 {
+      height: auto !important;
+
+      &,
+      & table,
+      & table td > div,
+      & table th > div {
+        width: 100% !important;
+      }
+    }
+  }
+
+  // Reported time Absence
+  // Reported time Exceptions
+  // Reported time Payable time
+}

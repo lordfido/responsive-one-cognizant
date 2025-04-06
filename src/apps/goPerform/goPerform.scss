@@ -46,6 +46,11 @@ div#body > section > div[role='main'] {
       width: 100% !important;
     }
 
+    .info_Header {
+      margin: 0 var(--page-margin) !important;
+      width: calc(100% - var(--page-margin) - var(--page-margin)) !important;
+    }
+
     /* Main header (with Main tabs an user info */
     #header {
       &.nav_cpm {
@@ -54,6 +59,7 @@ div#body > section > div[role='main'] {
 
       & > div.pull-right {
         margin-right: var(--page-margin) !important;
+        padding-bottom: 8px;
       }
     }
 
@@ -68,9 +74,7 @@ div#body > section > div[role='main'] {
     .section-body,
     .supervisor-content {
       margin: 0 var(--page-margin) !important;
-      width: calc(
-        100% - var(--page-margin) - var(--page-margin) - 30px - 10px
-      ) !important;
+      width: calc(100% - var(--page-margin) - var(--page-margin)) !important;
     }
 
     .section-body {

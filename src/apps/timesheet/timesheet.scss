@@ -1,0 +1,221 @@
+@import '../../constants/constants';
+
+html > body {
+  background: $white;
+  font-size: 16px;
+  margin: 0 auto !important;
+  padding: 0;
+  width: 100%;
+
+  @import './components/navbar';
+
+  iframe {
+    box-sizing: border-box;
+    padding: 12px;
+    padding-bottom: 0;
+    width: 100%;
+  }
+
+  & > form#TL_MSS_EE_SRCH_PRD {
+    margin: 0 auto !important;
+    max-width: $pageMaxWidth;
+    max-width: 1481px; // Large table needs more space
+    width: 100%;
+
+    & > #win0divPAGEBAR {
+      display: none;
+    }
+
+    // Loading status
+    & > .ps_box-toolshiddens {
+      & > #WAIT_win0 {
+        align-items: center;
+        background: $modalBackdrop;
+        bottom: initial !important;
+        display: flex !important;
+        height: 100vh;
+        justify-content: center;
+        left: 0 !important;
+        position: fixed !important;
+        right: initial !important;
+        top: 0 !important;
+        width: 100vw;
+      }
+
+      & > #SAVED_win0 {
+        bottom: initial !important;
+        left: 50% !important;
+        right: initial !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+      }
+    }
+
+    & > .ps_pagecontainer {
+      & > table.PSPAGECONTAINER,
+      & > table.PSPAGECONTAINER .ps_pspagecontainer,
+      & > table.PSPAGECONTAINER .ps_pspagecontainer > table.PSPAGECONTAINER {
+        max-width: 100%;
+        min-width: 100%;
+        overflow-x: hidden;
+        width: 100%;
+      }
+    }
+
+    &
+      > .ps_pagecontainer
+      > table.PSPAGECONTAINER
+      .ps_pspagecontainer
+      > table.PSPAGECONTAINER
+      > tbody
+      > tr {
+      display: none;
+      margin-bottom: 8px;
+
+      // Title
+      &:nth-child(2),
+        // User data
+        &:nth-child(4),
+        // Date selection
+        &:nth-child(6),
+        // FAQs
+        &:nth-child(8),
+        // Time report
+        &:nth-child(9),
+        // Form button actions
+        &:nth-child(11),
+        // Tabs list
+        &:nth-child(13),
+        // Tabs content
+        &:nth-child(14),
+        // Additional links
+        &:nth-child(19) {
+        display: block;
+        max-width: 100%;
+      }
+
+      // Date selection
+      &:nth-child(6) > td {
+        @import './components/dateSelection';
+      }
+
+      // Time report
+      &:nth-child(9) > td {
+        @import './components/timeReport';
+      }
+
+      // Form button actions
+      &:nth-child(11) > td {
+        @import './components/actionButtons';
+      }
+
+      // Tabs list
+      &:nth-child(13) > td {
+        @import './components/tabsList';
+      }
+
+      // Tabs content
+      &:nth-child(14) > td {
+        @import './components/tabsContent';
+      }
+
+      // Tabs list
+      &:nth-child(13) {
+        margin-bottom: 0;
+      }
+
+      & > td {
+        display: none;
+
+        &:nth-child(2) {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // User information tooltip
+  & > table#win0MOpopupContainer {
+    &,
+    #win0MOpopupInner {
+      height: auto !important;
+      width: auto !important;
+    }
+
+    #win0MOpopupInner > #win0MOdivpopupFrame {
+      background: $cardBg;
+      border-color: $cardBorder !important;
+      border-radius: $cardBorderRadius;
+      box-shadow: $cardShadow !important;
+      width: auto !important;
+    }
+  }
+
+  // User actions
+  & > div.RADIUS_MENU_DROPDOWN_CORNER.SHADOW_MENU_DROPDOWN {
+    background: $cardBg;
+    border-color: $cardBorder !important;
+    border-radius: $cardBorderRadius;
+    box-shadow: $cardShadow !important;
+
+    & > table {
+      margin: 0;
+
+      .PT_MENU_ACTION_LISTITEM_L0 {
+        padding: 0 8px;
+        margin: 8px 0;
+      }
+    }
+  }
+
+  // Time report help
+  #HelppopupContainer_win0 #HelppopupInner_win0.HelppopupInner {
+    background-color: $cardBg !important;
+    border-color: $cardBorder !important;
+    border-radius: $cardBorderRadius;
+    box-shadow: $cardShadow !important;
+    height: auto !important;
+    overflow: hidden;
+    width: auto !important;
+
+    & > .HelppopupTitleBar {
+      background-color: $cardHeadingBg;
+      border: none !important;
+      padding: 0;
+
+      #HelppopupTitle_win0 {
+        padding: 8px;
+
+        & > .PTPOPUP_TITLE {
+          background-color: transparent !important;
+          padding: 0;
+          text-align: left;
+        }
+
+        & + td {
+          width: auto !important;
+        }
+      }
+    }
+
+    & > .HelpdivpopupFrame {
+      background-color: transparent;
+      border: none !important;
+      box-shadow: none !important;
+      height: auto !important;
+    }
+
+    & > .popupShadow {
+      display: none;
+    }
+  }
+
+  // Datepicker {
+  #fullCalendar {
+    background-color: $cardBg !important;
+    border-color: $cardBorder !important;
+    border-radius: $cardBorderRadius;
+    box-shadow: $cardShadow !important;
+  }
+}

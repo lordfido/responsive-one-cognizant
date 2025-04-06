@@ -41,7 +41,7 @@
             }
 
             & > .saveBtn {
-              @include button(true);
+              @include button('primary');
 
               & {
                 float: none !important;

@@ -112,11 +112,15 @@
 
           .attach_button,
           button:not(:disabled) {
-            @include button;
+            @include button();
           }
 
           button.dark-blue {
-            @include button(true);
+            @include button('primary');
+          }
+
+          button:disabled {
+            @include button('disabled');
           }
         }
       }

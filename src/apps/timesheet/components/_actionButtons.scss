@@ -1,0 +1,66 @@
+@import '../../../constants/mixins';
+
+#win0divDERIVED_TL_WEEK_TL_HM_GROUP1 > table {
+  &,
+  & > tbody,
+  & > tbody > tr,
+  & > tbody > tr > td,
+  & > tbody > tr > td > table,
+  & > tbody > tr > td > table > tbody,
+  & > tbody > tr > td > table > tbody > tr {
+    display: block;
+    width: 100% !important;
+  }
+
+  & > tbody > tr > td {
+    padding: 0;
+
+    &.PAGROUPBOXLABELINVISIBLE {
+      display: none;
+    }
+
+    & > table > tbody > tr {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 8px;
+
+      & > td {
+        height: auto !important;
+
+        & > div > a {
+          @include button();
+
+          &.PSPUSHBUTTONDISABLED {
+            @include button('disabled');
+          }
+
+          & {
+            cursor: pointer;
+            height: auto;
+            margin: 0 !important;
+            padding: 0 !important;
+            padding: 8px 12px !important;
+          }
+
+          & > span,
+          & > span > input[type='button'] {
+            background-color: initial;
+            border: none !important;
+            border-radius: initial;
+            color: inherit;
+            cursor: inherit;
+            padding: 0 !important;
+            margin: 0 !important;
+            width: auto !important;
+          }
+        }
+
+        &:last-of-type > div > a:not(.PSPUSHBUTTONDISABLED) {
+          @include button('primary');
+        }
+      }
+    }
+  }
+}
