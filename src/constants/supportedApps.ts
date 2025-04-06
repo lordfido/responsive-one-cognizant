@@ -32,7 +32,7 @@ export const supportedApps: SupportedApps = {
     url: 'https://onecognizantazrapps.cognizant.com/1738'
   },
   timesheet: {
-    icon: require('../assets/icons/myLearningStudio.png'),
+    icon: require('../assets/icons/timesheets.png'),
     name: 'Timesheet',
     url: 'https://compass.talent.cognizant.com/psp/HCMPRD/EMPLOYEE/HRMS/c/ROLE_EMPLOYEE.TL_MSS_EE_SRCH_PRD.GBL'
   }
