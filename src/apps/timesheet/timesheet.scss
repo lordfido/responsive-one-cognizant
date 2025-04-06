@@ -2,10 +2,11 @@
 
 html > body {
   background: $white;
+  font-size: 16px;
   margin: 0 auto;
   width: 100%;
 
-  & > form {
+  & > form#TL_MSS_EE_SRCH_PRD {
     margin: 0 auto !important;
     max-width: $pageMaxWidth;
     max-width: 1481px; // Large table needs more space
@@ -93,6 +94,11 @@ html > body {
       // Time report
       &:nth-child(9) > td {
         @import './components/timeReport';
+      }
+
+      // Form button actions
+      &:nth-child(11) > td {
+        @import './components/actionButtons';
       }
 
       // Tabs list
