@@ -7,9 +7,12 @@ html > body {
   padding: 0;
   width: 100%;
 
+  @import './components/navbar';
+
   iframe {
     box-sizing: border-box;
-    padding: 0 12px;
+    padding: 12px;
+    padding-bottom: 0;
     width: 100%;
   }
 

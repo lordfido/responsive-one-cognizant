@@ -1,0 +1,35 @@
+.ptprtlcontainer > header#ptbr_header_container > div {
+  background-color: $navbarBg;
+
+  & > #ptdropdownmenu,
+  & > #pthdr2container {
+    margin: 0 auto;
+    background: none;
+    background-image: none;
+    max-width: $pageMaxWidth;
+    max-width: 1481px; // Large table needs more space
+  }
+
+  & > #ptdropdownmenu > nav,
+  & > #ptdropdownmenu > nav > div,
+  & > #ptdropdownmenu > nav > div > ul {
+    display: block;
+    height: auto;
+    position: relative;
+    width: 100%;
+  }
+
+  & > #ptdropdownmenu {
+    & > nav > div > ul > li {
+      display: inline-block;
+      margin: 0 auto;
+      left: initial !important;
+      padding: 4px 8px;
+    }
+
+    #pthnavbc > #pthbcScroll {
+      left: initial;
+      width: auto !important;
+    }
+  }
+}
