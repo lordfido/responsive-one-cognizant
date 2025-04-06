@@ -3,15 +3,20 @@
 html > body {
   background: $white;
   font-size: 16px;
-  margin: 0 auto;
+  margin: 0 auto !important;
+  padding: 0;
   width: 100%;
+
+  iframe {
+    box-sizing: border-box;
+    padding: 0 12px;
+    width: 100%;
+  }
 
   & > form#TL_MSS_EE_SRCH_PRD {
     margin: 0 auto !important;
     max-width: $pageMaxWidth;
     max-width: 1481px; // Large table needs more space
-    overflow-x: auto;
-    padding: 0 12px;
     width: 100%;
 
     & > #win0divPAGEBAR {
@@ -104,6 +109,11 @@ html > body {
       // Tabs list
       &:nth-child(13) > td {
         @import './components/tabsList';
+      }
+
+      // Tabs content
+      &:nth-child(14) > td {
+        @import './components/tabsContent';
       }
 
       // Tabs list
