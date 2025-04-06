@@ -70,7 +70,7 @@
                 text-align: center;
 
                 & > input {
-                  @include button(true);
+                  @include button('primary');
 
                   & {
                     cursor: pointer;

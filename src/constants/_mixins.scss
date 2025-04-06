@@ -14,12 +14,15 @@
   text-overflow: ellipsis;
 }
 
-@mixin button($primary: false) {
+@mixin button($type: '') {
+  background: initial !important;
   border-radius: $buttonBorderRadius;
+  border-width: 1px !important;
+  border-style: solid !important;
   text-align: center;
   transition: background-color 0.2s, border-color 0.2s;
 
-  @if $primary == true {
+  @if $type == 'primary' {
     background-color: $buttonPrimaryBg !important;
     border-color: $buttonPrimaryBorder !important;
     color: $buttonPrimaryColor !important;
@@ -28,6 +31,11 @@
       background-color: $buttonPrimaryBgHover !important;
       border-color: $buttonPrimaryBorderHover !important;
     }
+  } @else if $type == 'disabled' {
+    background-color: $buttonDisabledBg !important;
+    border-color: $buttonDisabledBorder !important;
+    color: $buttonDisabledColor !important;
+    cursor: not-allowed !important;
   } @else {
     background-color: $buttonBg !important;
     border-color: $buttonBorder !important;
