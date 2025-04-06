@@ -137,7 +137,7 @@
           }
 
           & > .suggestQueryBtn {
-            @include button(true);
+            @include button('primary');
           }
 
           & > .input-area-wrapper {

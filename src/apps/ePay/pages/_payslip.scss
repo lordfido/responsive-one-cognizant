@@ -5,7 +5,7 @@
     width: auto !important;
 
     input[type='submit'] {
-      @include button(true);
+      @include button('primary');
 
       & {
         cursor: pointer;

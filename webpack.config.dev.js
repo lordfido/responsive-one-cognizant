@@ -13,7 +13,8 @@ module.exports = {
     ePay: path.resolve(appsPath, 'ePay/index.ts'),
     goPerform: path.resolve(appsPath, 'goPerform/index.ts'),
     liveSupport: path.resolve(appsPath, 'liveSupport/index.ts'),
-    myLearningStudio: path.resolve(appsPath, 'myLearningStudio/index.ts')
+    myLearningStudio: path.resolve(appsPath, 'myLearningStudio/index.ts'),
+    timesheet: path.resolve(appsPath, 'timesheet/index.ts')
   },
   output: {
     filename: '[name].js',

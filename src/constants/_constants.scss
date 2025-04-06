@@ -49,6 +49,10 @@ $buttonPrimaryBorder: $teal;
 $buttonPrimaryBorderHover: $midBlue;
 $buttonPrimaryColor: $white;
 
+$buttonDisabledBg: $lightGrey;
+$buttonDisabledBorder: $lightGrey;
+$buttonDisabledColor: $grey;
+
 $cardBg: $white;
 $cardBorder: $lightGrey;
 $cardBorderRadius: $borderRadius;
@@ -78,6 +82,15 @@ $modalHeaderBg: $cognizantBlue;
 $modalHeaderHeight: 60px;
 
 $navbarBg: $cognizantBlue;
+
+$tabBg: $lightBlue;
+$tabBorder: 3px solid $lightBlue;
+$tabColor: $darkBlue;
+$tabActiveBg: $white;
+$tabActiveBorder: 3px solid $accentBlue;
+$tabActiveColor: $accentBlue;
+$tabHeight: 45px;
+$tabPadding: 12px 14px;
 
 $tableHeadingBg: $cognizantBlue;
 $tableHeadingBorderColor: $cognizantBlue;

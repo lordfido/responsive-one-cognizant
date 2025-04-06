@@ -3,7 +3,8 @@ type AppName =
   | 'ePay'
   | 'goPerform'
   | 'liveSupport'
-  | 'myLearningStudio';
+  | 'myLearningStudio'
+  | 'timesheet';
 
 export type FrameName = AppName | 'rootLink';
 

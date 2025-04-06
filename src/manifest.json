@@ -7,6 +7,7 @@
   },
   "content_scripts": [
     {
+      "all_frames": true,
       "matches": [
         "https://onecognizant.cognizant.com/*"
       ],
@@ -15,6 +16,7 @@
       ]
     },
     {
+      "all_frames": true,
       "matches": [
         "https://onecognizantbcazrapps.cognizant.com/2736/*"
       ],
@@ -23,6 +25,7 @@
       ]
     },
     {
+      "all_frames": true,
       "matches": [
         "https://onecognizantbcazrapps.cognizant.com/2394/*"
       ],
@@ -31,6 +34,7 @@
       ]
     },
     {
+      "all_frames": true,
       "matches": [
         "https://onecognizantchat.cognizant.com/2425/*"
       ],
@@ -39,6 +43,7 @@
       ]
     },
     {
+      "all_frames": true,
       "matches": [
         "https://onecognizantazrapps.cognizant.com/1738/*"
       ],
@@ -47,6 +52,16 @@
       ]
     },
     {
+      "all_frames": true,
+      "matches": [
+        "https://compass.talent.cognizant.com/*"
+      ],
+      "js": [
+        "/js/timesheet.js"
+      ]
+    },
+    {
+      "all_frames": true,
       "matches": [
         "https://epay.cognizant.com/*"
       ],
@@ -99,6 +114,15 @@
       "resources": [
         "/images/*",
         "/css/myLearningStudio.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://compass.talent.cognizant.com/*"
+      ],
+      "resources": [
+        "/images/*",
+        "/css/timesheet.css"
       ]
     },
     {
