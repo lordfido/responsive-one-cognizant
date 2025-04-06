@@ -102,6 +102,11 @@ html > body {
       }
 
       // Tabs list
+      &:nth-child(13) > td {
+        @import './components/tabsList';
+      }
+
+      // Tabs list
       &:nth-child(13) {
         margin-bottom: 0;
       }
