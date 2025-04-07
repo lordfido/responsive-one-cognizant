@@ -1,7 +1,7 @@
+// Reported time Summary
 #win0divTL_INSTALL_VW3_\$0 > table {
   width: 100% !important;
 
-  // Reported time Summary
   & > tbody > tr {
     &:first-of-type > .PSLEVEL1GRIDLABEL {
       background-color: $tableHeadingBg;
@@ -54,8 +54,40 @@
       }
     }
   }
-
-  // Reported time Absence
-  // Reported time Exceptions
-  // Reported time Payable time
 }
+
+// Reported time Absence
+#win0divDERIVED_TL_WEEK_TL_HM_GROUP5 > table {
+  width: 100% !important;
+
+  & > tbody > tr {
+    &:first-of-type {
+      display: none;
+    }
+
+    &,
+    & > td,
+    & > td > table {
+      width: 100% !important;
+    }
+
+    & > td > table > tbody > tr {
+      display: none;
+
+      &:nth-child(2) {
+        display: table-row;
+
+        & #win0divDERIVED_TL_WEEK_SHOW_AEVT_OPTN {
+          &,
+          & > table,
+          & > table > tbody > tr > td > table {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Reported time Exceptions
+// Reported time Payable time
