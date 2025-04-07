@@ -1,5 +1,8 @@
 @import '../../styles';
 
+$navbarHeight: 47px;
+$footerMinHeight: 240px;
+
 /* Main Iframe */
 /* Main heading (Welcome, Cognizant News and Quick TODOs) */
 #div_qkToDoscontainer,
@@ -16,25 +19,58 @@ body {
   width: 100%;
 }
 
-html > body > div#DesktopPlatformBar {
-  // Content
-  & > div.containerHolder > div.homePageDivHolder {
-    max-height: none;
-    max-width: 100% !important;
+html > body {
+  height: 100svh;
+  overflow: hidden;
+  padding-bottom: 0;
 
-    & > #appFrame {
-      height: calc(100vh - 47px) !important;
-      max-width: 100% !important;
-      width: 100% !important;
-    }
+  &,
+  & > div#DesktopPlatformBar {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
   }
 
-  // Promotions
-  .beCognizantLink,
-  .promoNavbarIcon,
-  // Floating widgets
-  & > nav#sideNavComplMenu,
-  & > div#livechatOneC2 {
-    display: none !important;
+  & > div#DesktopPlatformBar {
+    height: calc(100svh - #{$navbarHeight});
+    margin-top: $navbarHeight;
+    overflow: hidden;
+    overflow-y: auto;
+
+    & > nav.customNavBar {
+      background: $navbarBg !important;
+    }
+
+    // Content
+    & > div.containerHolder {
+      flex: 1;
+      margin-top: 0;
+      max-width: $pageMaxWidth !important;
+
+      & > div.homePageDivHolder {
+        max-height: none;
+        max-width: 100% !important;
+
+        & > #divHomepageContainer {
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+      }
+    }
+
+    @media screen and (min-width: 601px) {
+      & > footer.oneC_Ext_Footer > .oneC_Ext_linksHolder > div > div {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    // Promotions
+    .beCognizantLink,
+    .promoNavbarIcon,
+    // Floating widgets
+    & > nav#sideNavComplMenu,
+    & > div#livechatOneC2 {
+      display: none !important;
+    }
   }
 }
