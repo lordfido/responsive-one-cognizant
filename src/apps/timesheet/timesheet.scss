@@ -9,6 +9,11 @@ html > body {
 
   @import './components/navbar';
 
+  & > #ptifrmcontent > #ptifrmtarget {
+    position: relative;
+    top: initial;
+  }
+
   &:has(form#TL_MSS_EE_SRCH_PRD) {
     box-sizing: border-box;
     padding: 12px;
