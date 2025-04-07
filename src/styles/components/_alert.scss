@@ -1,21 +1,34 @@
 .Alert {
   align-items: center;
-  background-color: $lightBlue;
-  border: 1px solid $cardBorder;
+  background-color: $cardBorder;
+  border: 1px solid $cognizantBlue;
   border-radius: $cardBorderRadius;
   bottom: 12px;
   box-shadow: $cardShadow;
   display: flex;
   flex-direction: row;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
+  font-size: 14px;
+  font-weight: normal;
   max-width: 300px;
   padding: 12px;
   position: fixed;
   right: 12px;
   width: 100%;
+  z-index: map-get($map: $zIndexes, $key: 'notification');
 
   &,
   & * {
     box-sizing: border-box;
+    cursor: default;
+  }
+
+  & * {
+    font-family: inherit !important;
+    font-size: inherit;
+    font-weight: inherit;
   }
 
   &__Content {
@@ -23,10 +36,8 @@
   }
 
   &__Text {
-    font-size: 14px;
-    font-weight: normal;
     margin: 0;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -40,6 +51,7 @@
   &__Title {
     color: $cognizantBlue;
     font-size: 16px;
+    font-weight: bold;
   }
 
   &__Buttons {
@@ -50,8 +62,10 @@
 
     & {
       align-items: center;
+      cursor: pointer;
       display: flex;
       justify-content: center;
+      line-height: 1;
       min-height: 32px;
       min-width: 32px;
       padding: 6px;
