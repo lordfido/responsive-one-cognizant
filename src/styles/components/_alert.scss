@@ -1,0 +1,61 @@
+.Alert {
+  align-items: center;
+  background-color: $lightBlue;
+  border: 1px solid $cardBorder;
+  border-radius: $cardBorderRadius;
+  bottom: 12px;
+  box-shadow: $cardShadow;
+  display: flex;
+  flex-direction: row;
+  max-width: 300px;
+  padding: 12px;
+  position: fixed;
+  right: 12px;
+  width: 100%;
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+
+  &__Content {
+    flex: 1;
+  }
+
+  &__Text {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 8px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__Description {
+    color: $darkGrey;
+  }
+
+  &__Title {
+    color: $cognizantBlue;
+    font-size: 16px;
+  }
+
+  &__Buttons {
+  }
+
+  &__Button {
+    @include button();
+
+    & {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      min-height: 32px;
+      min-width: 32px;
+      padding: 6px;
+      text-transform: uppercase;
+    }
+  }
+}

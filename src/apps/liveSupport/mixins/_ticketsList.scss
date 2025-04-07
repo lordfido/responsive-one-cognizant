@@ -1,5 +1,3 @@
-@import '../../../constants/mixins';
-
 @mixin tickets-list {
   & > div {
     @include card;
