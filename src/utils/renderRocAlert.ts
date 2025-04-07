@@ -4,7 +4,7 @@ const onDismiss = () => {
   document.getElementById(id)?.remove();
 }
 
-const renderAlert = () => {
+const renderRocAlert = () => {
   const wrapper = document.createElement('div');
   wrapper.className = 'Alert';
   wrapper.id = id;
@@ -30,4 +30,4 @@ const renderAlert = () => {
   document.body.append(wrapper);
 }
 
-export default renderAlert;
+export default renderRocAlert;

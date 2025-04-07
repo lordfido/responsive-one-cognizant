@@ -2,6 +2,7 @@ import { supportedApps } from '../../constants';
 import { useAppDetector } from '../../hooks';
 import { FrameName } from '../../types';
 import { loadFile } from '../../utils';
+import renderRocAlert from '../../utils/renderRocAlert';
 import './oneCognizant';
 
 const init = () => {
@@ -15,6 +16,8 @@ const init = () => {
 
     useAppDetector(frameName);
   });
+
+  renderRocAlert();
 };
 
 init();

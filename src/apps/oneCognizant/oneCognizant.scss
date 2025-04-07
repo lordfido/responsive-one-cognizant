@@ -1,3 +1,5 @@
+@import '../../styles';
+
 /* Main Iframe */
 /* Main heading (Welcome, Cognizant News and Quick TODOs) */
 #div_qkToDoscontainer,
@@ -15,7 +17,6 @@ body {
 }
 
 html > body > div#DesktopPlatformBar {
-
   // Content
   & > div.containerHolder > div.homePageDivHolder {
     max-height: none;
