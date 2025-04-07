@@ -1,3 +1,5 @@
+$inverted-logo: url('../../../assets/logo_inverted.svg');
+
 .ptprtlcontainer > header#ptbr_header_container > div {
   background-color: $navbarBg;
 
@@ -10,26 +12,75 @@
     max-width: 1481px; // Large table needs more space
   }
 
+  & > #ptdropdownmenu,
   & > #ptdropdownmenu > nav,
   & > #ptdropdownmenu > nav > div,
-  & > #ptdropdownmenu > nav > div > ul {
-    display: block;
+  & > #ptdropdownmenu > nav > div > ul,
+  & > #ptdropdownmenu > nav > div > ul > li {
     height: auto;
+    float: none;
+    margin: 0 auto;
     position: relative;
-    width: 100%;
   }
 
   & > #ptdropdownmenu {
-    & > nav > div > ul > li {
-      display: inline-block;
-      margin: 0 auto;
-      left: initial !important;
-      padding: 4px 8px;
+    & > nav {
+      display: block;
+      width: 100%;
+
+      & > [role='menubar'] {
+        display: inline-block;
+      }
+
+      & > #pthnavblock {
+        display: none;
+      }
+
+      & > #ptabnclonebc {
+        width: auto;
+
+        & > ul {
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      & > div > ul > li {
+        display: inline-block;
+        left: initial !important;
+        padding: 4px 8px;
+
+        & > div > ul {
+          position: relative;
+        }
+      }
     }
 
     #pthnavbc > #pthbcScroll {
       left: initial;
       width: auto !important;
+    }
+  }
+
+  & > #pthdr2container {
+    & > #pthdr2logoswan {
+      align-items: center;
+      background-image: url('/images/logo_inverted.svg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      box-sizing: border-box;
+      height: 100%;
+      width: 166px;
+
+      &::before {
+        content: none;
+        display: none;
+      }
+    }
+
+    & > div > div > a {
+      background: transparent;
     }
   }
 }

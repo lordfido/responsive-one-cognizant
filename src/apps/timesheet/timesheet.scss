@@ -9,7 +9,7 @@ html > body {
 
   @import './components/navbar';
 
-  iframe {
+  &:has(form#TL_MSS_EE_SRCH_PRD) {
     box-sizing: border-box;
     padding: 12px;
     padding-bottom: 0;
@@ -20,6 +20,7 @@ html > body {
     margin: 0 auto !important;
     max-width: $pageMaxWidth;
     max-width: 1481px; // Large table needs more space
+    overflow-x: auto;
     width: 100%;
 
     & > #win0divPAGEBAR {
