@@ -2,7 +2,7 @@
   "name": "responsive-one-cognizant",
   "displayName": "Responsive OneCognizant",
   "description": "Makes OneCognizant responsive",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "repository": "git@github.com:lordfido/responsive-one-cognizant.git",
   "author": "Rafael Pérez García <real.lord.fido@gmail.com>",
   "license": "MIT",
