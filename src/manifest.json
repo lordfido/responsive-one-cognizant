@@ -3,7 +3,7 @@
   "version": "1.5",
   "description": "Makes OneCognizant responsive",
   "icons": {
-    "128": "./images/cognizant_logo.png"
+    "128": "images/cognizant_logo.png"
   },
   "content_scripts": [
     {
@@ -140,7 +140,7 @@
   ],
   "action": {
     "default_icon": {
-      "128": "./images/cognizant_logo.png"
+      "128": "images/cognizant_logo.png"
     },
     "default_title": "Responsive OneCognizant",
     "default_popup": "./popup.html"
