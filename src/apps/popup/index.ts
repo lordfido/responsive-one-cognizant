@@ -1,7 +1,8 @@
 import { supportedApps } from '../../constants';
+import manifest from '../../manifest.json';
 import { log } from '../../utils';
-import { RenderListProps } from './types';
 import './popup.scss';
+import { RenderListProps } from './types';
 
 const renderListItem = (
   { icon, id, name, url }: RenderListProps,
@@ -46,4 +47,14 @@ const renderList = () => {
   root?.appendChild(wrapper);
 };
 
+const renderVersion = () => {
+  const elem = document.getElementById('extensionVersion');
+  const version = manifest.version;
+
+  if (elem && version) {
+    elem.innerText = `v${version}`;
+  }
+};
+
+renderVersion();
 renderList();

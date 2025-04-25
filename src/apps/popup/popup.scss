@@ -21,6 +21,8 @@ body {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 #root {
@@ -36,12 +38,31 @@ body {
   overflow: hidden;
   width: 100%;
 
-  &__Title {
+  &__Header {
+    align-items: center;
     background-color: $darkBlue;
     color: $white;
     cursor: default;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
     padding: 8px;
     font-size: 0.9rem;
+  }
+
+  &__Title,
+  &__Version {
+    display: inline-block;
+  }
+
+  &__Title {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  &__Version {
+    font-size: 0.8rem;
   }
 
   &__Content {
