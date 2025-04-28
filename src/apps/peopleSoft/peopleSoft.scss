@@ -1,1 +1,78 @@
 @import '../../styles';
+
+// HEADER
+html > body > form.PSForm > .ps_wrapper {
+  &
+    > .ps_header
+    > .ps_header_panel
+    > .ps_pspagecontainer_hdr
+    > .ps_header_bar-container
+    > .ps_header_bar {
+    background: transparent;
+    background-color: $navbarBg;
+
+    & > .ps_header_bar_cont > .ps_back_cont > .ps_custom_cont {
+      &,
+      & > .ps_box-group.lphdrleft,
+      & > .ps_box-group.lphdrleft > .psc_fullsize_button,
+      & > .ps_box-group.lphdrleft > .psc_fullsize_button > .ps-button-wrapper,
+      &
+        > .ps_box-group.lphdrleft
+        > .psc_fullsize_button
+        > .ps-button-wrapper
+        a {
+        height: 100%;
+      }
+
+      &
+        > .ps_box-group.lphdrleft
+        > .psc_fullsize_button
+        > .ps-button-wrapper
+        a {
+        &:hover {
+          background-color: transparent;
+          border-color: $white;
+        }
+
+        & > img.ps-img {
+          display: none;
+        }
+
+        &::before {
+          background-image: url('/images/logo_inverted.svg');
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          content: ' ';
+          display: block;
+          height: 100%;
+          width: 128px;
+        }
+      }
+    }
+  }
+
+  & > .ps_mid_section > .ps_content > .ps_main > .ps_pagecontainer {
+    box-sizing: border-box;
+    padding: 8px;
+    width: 100%;
+
+    & > .ps_pspagecontainer > .ps_scrollable {
+      height: 100% !important;
+
+      &
+        > #win0divCT_ABS_FILE_WRK_GROUP_BOX
+        > .ps_box-button
+        > .ps-button-wrapper
+        > .ps-button {
+        &:not([disabled]) {
+          @include button('primary');
+        }
+
+        &[disabled] {
+          @include button('disabled');
+        }
+      }
+    }
+  }
+}
