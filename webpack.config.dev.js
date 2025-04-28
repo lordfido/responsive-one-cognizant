@@ -14,6 +14,7 @@ module.exports = {
     goPerform: path.resolve(appsPath, 'goPerform/index.ts'),
     liveSupport: path.resolve(appsPath, 'liveSupport/index.ts'),
     myLearningStudio: path.resolve(appsPath, 'myLearningStudio/index.ts'),
+    peopleSoft: path.resolve(appsPath, 'peopleSoft/index.ts'),
     timesheet: path.resolve(appsPath, 'timesheet/index.ts')
   },
   output: {

@@ -56,8 +56,26 @@
       "matches": [
         "https://compass.talent.cognizant.com/*"
       ],
+      "include_globs": [
+        "*ROLE_EMPLOYEE.TL_MSS_EE_SRCH_PRD.GBL",
+        "*ROLE_EMPLOYEE.TL_MSS_EE_SRCH_PRD.GBL*"
+      ],
       "js": [
         "/js/timesheet.js"
+      ]
+    },
+    {
+      "all_frames": true,
+      "matches": [
+        "https://compass.talent.cognizant.com/*"
+      ],
+      "exclude_globs": [
+        "*ROLE_EMPLOYEE.TL_MSS_EE_SRCH_PRD.GBL",
+        "*ROLE_EMPLOYEE.TL_MSS_EE_SRCH_PRD.GBL*",
+        "*HCMPRD\/EMPLOYEE\/HRMS\/s\/WEBLIB*"
+      ],
+      "js": [
+        "/js/peopleSoft.js"
       ]
     },
     {
@@ -122,6 +140,7 @@
       ],
       "resources": [
         "/images/*",
+        "/css/peopleSoft.css",
         "/css/timesheet.css"
       ]
     },

@@ -4,6 +4,7 @@ type AppName =
   | 'goPerform'
   | 'liveSupport'
   | 'myLearningStudio'
+  | 'peopleSoft'
   | 'timesheet';
 
 export type FrameName = AppName | 'rootLink';

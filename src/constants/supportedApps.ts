@@ -31,6 +31,11 @@ export const supportedApps: SupportedApps = {
     name: 'My Learning Studio',
     url: 'https://onecognizantazrapps.cognizant.com/1738'
   },
+  peopleSoft: {
+    icon: require('../assets/icons/peopleSoft.png'),
+    name: 'PeopleSoft',
+    url: 'https://compass.talent.cognizant.com/psc/HCMPRD/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL'
+  },
   timesheet: {
     icon: require('../assets/icons/timesheet.png'),
     name: 'Timesheet',
