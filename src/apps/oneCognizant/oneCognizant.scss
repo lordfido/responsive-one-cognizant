@@ -1,6 +1,7 @@
 @import '../../styles';
 
 $navbarHeight: 47px;
+$newNavbarHeight: 56px;
 $footerMinHeight: 240px;
 
 /* Main Iframe */
@@ -20,6 +21,7 @@ body {
 }
 
 html > body {
+  // Old OneCognizant
   height: 100svh;
   overflow: hidden;
   padding-bottom: 0;
@@ -74,5 +76,49 @@ html > body {
     & > div#livechatOneC2 {
       display: none !important;
     }
+  }
+
+  // New OneCognizant
+  & > main#OneCognizantHomepageDiv {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - $newNavbarHeight);
+
+    & > .landingPage1C {
+      flex: 1;
+
+      // Feed & Updates
+      & > .row:nth-child(2),
+      // Resource center section
+      & > .row:nth-child(5),
+      // Social corner section
+      & > .row:nth-child(6) {
+        display: none;
+      }
+
+      & > .row:nth-child(3) > .col-12:nth-child(2) > .row {
+        & > .col-12:nth-child(2) {
+          @media screen and (min-width: 1101px) {
+            width: 66.6666667%;
+          }
+        }
+
+        & > .col-12:nth-child(3) {
+          display: none;
+        }
+      }
+
+      & > .row:nth-child(5) {
+        display: none;
+      }
+    }
+  }
+
+  // AI Bots
+  #aiAssistantBot_policy,
+  #tooltip_aiAssistantBot_policy,
+  #aiAssistantBot_itsupport,
+  #tooltip_aiAssistantBot_itsupport {
+    display: none;
   }
 }
