@@ -2,8 +2,8 @@ const fs = require('fs');
 const { PACKAGE_LOCATION } = require('./constants');
 
 const increaseVersion = (current) => {
-  const [major, minor, patch] = current.split('.');
-  return `${major}.${Number(minor) + 1}.${patch}`;
+  const [major, minor] = current.split('.');
+  return `${major}.${Number(minor) + 1}.0`;
 };
 
 const updatePackageJson = () => {

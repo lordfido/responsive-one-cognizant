@@ -1,6 +1,6 @@
 {
   "name": "Responsive OneCognizant",
-  "version": "1.5",
+  "version": "1.6",
   "description": "Makes OneCognizant responsive",
   "icons": {
     "128": "images/cognizant_logo.png"
@@ -72,7 +72,7 @@
       "exclude_globs": [
         "*ROLE_EMPLOYEE.TL_MSS_EE_SRCH_PRD.GBL",
         "*ROLE_EMPLOYEE.TL_MSS_EE_SRCH_PRD.GBL*",
-        "*HCMPRD\/EMPLOYEE\/HRMS\/s\/WEBLIB*"
+        "*HCMPRD/EMPLOYEE/HRMS/s/WEBLIB*"
       ],
       "js": [
         "/js/peopleSoft.js"
